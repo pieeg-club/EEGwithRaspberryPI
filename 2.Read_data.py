@@ -11,7 +11,10 @@ spi = spidev.SpiDev()
 spi.open(0,0)
 spi.max_speed_hz=2500000
 spi.lsbfirst=False
-spi.cshigh=False
+
+#spi.cshigh=False
+spi.cshigh=Trye
+
 spi.mode=0b01
 spi.bits_per_word = 8
 
@@ -98,6 +101,7 @@ while 1:
   #print ("read_data")
   for a in lenght:
    output[a]=spi.xfer(test)
+   #output[a]=spi2.xfer(test)
   print ("OUTPUT", output[1])
    # for number_bytes in byte:
     

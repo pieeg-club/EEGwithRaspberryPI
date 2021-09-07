@@ -5,6 +5,7 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(26, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 from time import sleep
+GPIO.cleanup()
 
 spi = spidev.SpiDev()
 spi.open(0,0)
@@ -87,9 +88,11 @@ output=[0,0,0,0,0]
 while 1:  
 # if HAL_GPIO_WritePin(GPIOD, CS_Pin, GPIO_PIN_RESET);
  if GPIO.input(26) == GPIO.HIGH:
+ #if (GPIO.input(26) == 1):
   DRDY=0
   #print ("DRDY high")
  if GPIO.input(26) == GPIO.LOW & DRDY==0:
+ #if (GPIO.input(11)==1) ＆ DRDY==0): 
   DRDY=1
   #print ("read_data")
   for a in lenght:

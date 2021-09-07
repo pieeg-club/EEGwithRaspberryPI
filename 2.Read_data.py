@@ -89,6 +89,7 @@ while 1:
 # if HAL_GPIO_WritePin(GPIOD, CS_Pin, GPIO_PIN_RESET);
  if GPIO.input(26) == GPIO.HIGH:
  #if (GPIO.input(26) == 1):
+ #GPIO.input(2)==0:
   DRDY=0
   #print ("DRDY high")
  if GPIO.input(26) == GPIO.LOW & DRDY==0:

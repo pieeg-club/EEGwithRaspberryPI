@@ -22,10 +22,10 @@ Shiled connceted with raspbberryPI only in the netxt points
   35  CLKL  
   36  CS  
   
-#### Description of code  
-
+#### Description of the code  
+For signal processing can be used Python scripts or Brainflow   
 #### Citation  
-
+Soon will be published   
 #### Contacts  
 ildar.o2010@yandex.ru 
 

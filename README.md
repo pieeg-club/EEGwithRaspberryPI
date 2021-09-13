@@ -9,3 +9,14 @@
 -  [Citation](https://github.com/Ildaron/ironbci/blob/master/README.md#7-citation)   
 -  [Contacts](https://github.com/Ildaron/ironbci/blob/master/README.md#8-contacts)  
 
+#### How it Works  
+
+#### Device pinout  
+
+#### Description of code  
+
+#### Citation  
+
+#### Contacts  
+ildar.o2010@yandex.ru 
+

@@ -15,12 +15,12 @@ Full galvanic isolation from mains required.
 This also applies to the monitor. Use only a monitor that is powered by the RaspberryPI.  
 #### Device pinout  
 Shiled connceted with raspbberryPI only in the netxt points 
-  43  +5V
-  44  GND
-  37  MOSI
-  34  MISO
-  35  CLKL
-  36  CS
+  43  +5V  
+  44  GND  
+  37  MOSI  
+  34  MISO  
+  35  CLKL  
+  36  CS  
   
 #### Description of code  
 

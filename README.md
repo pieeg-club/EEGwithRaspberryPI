@@ -10,7 +10,9 @@
 -  [Contacts](https://github.com/Ildaron/ironbci/blob/master/README.md#8-contacts)  
 
 #### How it Works  
-
+Connect the shield to Raspberry PI 3 or RaspberryPI4 and after that connect the device to a battery (power supply) and connect electrodes.
+Full galvanic isolation from mains required.  
+This also applies to the monitor. Use only a monitor that is powered by the RaspberryPI.  
 #### Device pinout  
 
 #### Description of code  

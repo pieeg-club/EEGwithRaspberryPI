@@ -3,10 +3,10 @@
 
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.1..jpg "general view")​
 
--  [How it Works](https://github.com/Ildaron/ironbci/blob/master/README.md#1-how-it-works)  
--  [Device pinout](https://github.com/Ildaron/ironbci#2--general-pin-information-about-ads1299-signals)   
--  [Description of code](https://github.com/Ildaron/ironbci#4-description-of-code-ads_1299c)        
--  [Citation](https://github.com/Ildaron/ironbci/blob/master/README.md#7-citation)   
+-  [How it Works](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#how-it-works)  
+-  [Device pinout](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#device-pinout)   
+-  [Description of code](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#description-of-code)        
+-  [Citation](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#citation)   
 -  [Contacts](https://github.com/Ildaron/ironbci/blob/master/README.md#8-contacts)  
 
 #### How it Works  

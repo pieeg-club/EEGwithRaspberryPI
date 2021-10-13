@@ -7,11 +7,11 @@ GPIO.setup(37, GPIO.IN)
 from time import sleep
 spi = spidev.SpiDev()
 spi.open(0,0)
-spi.max_speed_hz=1000000
+spi.max_speed_hz=600000
 
 #spi.max_speed_hz=25000
-#spi.lsbfirst=False
-spi.cshigh=False
+spi.lsbfirst=False
+#spi.cshigh=False
 #spi.cslow=True
 
 spi.mode=0b01
@@ -43,25 +43,26 @@ data_check=0xFFFFFF
 
 def read_byte(register):
 # GPIO.output(18, False)   
- print ("write_regsiter")
+# print ("write_regsiter")
  write=0x20
  register_write=write|register
  data = [register_write,0x00,register]
  read_reg=spi.xfer(data)
 # GPIO.output(18, True)
- print ("data", read_reg)
+# print ("data", read_reg)
 def send_command(command):
 # GPIO.output(18, False)
  send_data = [command]
  com_reg=spi.xfer(send_data)
 # GPIO.output(18, True)
- time.sleep(1)
+# time.sleep(1)
  
 def write_byte(register,data):
 # GPIO.output(18, False)
  write=0x40
  register_write=write|register
  data = [register_write,0x00,data]
+ print (data)
  spi.xfer(data)
 # GPIO.output(18, True)
 # time.sleep(1)
@@ -70,6 +71,7 @@ send_command (wakeup)
 send_command (stop)
 send_command (reset)
 send_command (sdatac)
+
 
 write_byte (0x14, 0x80) #GPIO
 write_byte (config1, 0x96)
@@ -82,7 +84,7 @@ write_byte (0x0F, 0x00)
 write_byte (0x10, 0x00)
 write_byte (0x11, 0x00)
 write_byte (0x15, 0x20)
-
+#
 write_byte (0x17, 0x00)
 
 write_byte (ch1set, 0x00)
@@ -93,19 +95,19 @@ send_command (rdatac)
 send_command (start)
 DRDY=1
 
-while 1:   
- if GPIO.input(37) == 1:
-  DRDY=0
- if (GPIO.input(37)==0 & DRDY==0): 
-  DRDY=1
-  output=spi.readbytes(27)
-  voltage_1=(output[3]<<8)| output[4]
-  voltage_1=(voltage_1<<8)| output[5]
-  convert_voktage=voltage_1|data_test
-  if convert_voktage==data_check:
-   voltage_1_after_convert=(16777214-voltage_1)
-  else:
-   voltage_1_after_convert=voltage_1
-  print ("result", voltage_1_after_convert)
-  #time.sleep(0.1)
+for a in range (0,100,1):
+ GPIO.wait_for_edge(37, GPIO.FALLING)
+ output=spi.readbytes(27)
+ voltage_1=(output[3]<<8)| output[4]
+ voltage_1=(voltage_1<<8)| output[5]
+ convert_voktage=voltage_1|data_test
+ if convert_voktage==data_check:
+  voltage_1_after_convert=(16777214-voltage_1)
+ else:
+  voltage_1_after_convert=voltage_1
   
+ voltage_1_after_convert=round(1000000*4.5*(voltage_1_after_convert/16777215),2) 
+ print ("result", voltage_1_after_convert)
+spi.close()
+print ("stop")
+  #time.sleep(0.1)

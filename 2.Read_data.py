@@ -17,6 +17,8 @@ spi.lsbfirst=False
 spi.mode=0b01
 spi.bits_per_word = 8
 
+
+who_i_am=0x00
 config1=0x01
 config2=0X02
 config3=0X03
@@ -42,14 +44,14 @@ data_test= 0x7FFFFF
 data_check=0xFFFFFF
 
 def read_byte(register):
-# GPIO.output(18, False)   
-# print ("write_regsiter")
  write=0x20
  register_write=write|register
  data = [register_write,0x00,register]
  read_reg=spi.xfer(data)
 # GPIO.output(18, True)
-# print ("data", read_reg)
+ print ("data", read_reg)
+
+ 
 def send_command(command):
 # GPIO.output(18, False)
  send_data = [command]
@@ -78,7 +80,7 @@ write_byte (config1, 0x96)
 write_byte (config2, 0xD4)
 write_byte (config3, 0xE0)
 write_byte (0x04, 0x00)
-write_byte (0x0D, 0xFF)
+#write_byte (0x0D, 0xFF)
 write_byte (0x0E, 0x00)
 write_byte (0x0F, 0x00)
 write_byte (0x10, 0x00)
@@ -86,28 +88,36 @@ write_byte (0x11, 0x00)
 write_byte (0x15, 0x20)
 #
 write_byte (0x17, 0x00)
-
 write_byte (ch1set, 0x00)
 write_byte (ch2set, 0x00)
+write_byte (ch3set, 0x00)
+write_byte (ch4set, 0x00)
+write_byte (ch5set, 0x00)
+write_byte (ch6set, 0x00)
+write_byte (ch7set, 0x00)
+write_byte (ch8set, 0x00)
 
-read_byte(ch1set)
 send_command (rdatac)
 send_command (start)
 DRDY=1
 
-for a in range (0,100,1):
+result=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+while 1:
  GPIO.wait_for_edge(37, GPIO.FALLING)
  output=spi.readbytes(27)
- voltage_1=(output[3]<<8)| output[4]
- voltage_1=(voltage_1<<8)| output[5]
- convert_voktage=voltage_1|data_test
- if convert_voktage==data_check:
-  voltage_1_after_convert=(16777214-voltage_1)
- else:
-  voltage_1_after_convert=voltage_1
-  
- voltage_1_after_convert=round(1000000*4.5*(voltage_1_after_convert/16777215),2) 
- print ("result", voltage_1_after_convert)
+ for a in range (3,25,3):
+  voltage_1=(output[a]<<8)| output[a+1]
+  voltage_1=(voltage_1<<8)| output[a+2]
+  convert_voktage=voltage_1|data_test
+  if convert_voktage==data_check:
+   voltage_1_after_convert=(16777214-voltage_1)
+  else:
+   voltage_1_after_convert=voltage_1
+  channel_num =  (a/3)
+  result[int (channel_num)]=round(1000000*4.5*(voltage_1_after_convert/16777215),2)
+  print ("channel_num",channel_num, result[int (channel_num)])
+
 spi.close()
 print ("stop")
-  #time.sleep(0.1)
+#time.sleep(0.1)

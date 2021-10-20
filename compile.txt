@@ -1,0 +1,10 @@
+For SPI https://github.com/vsergeev/c-periphery
+
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+
+and our C file created by 
+
+$ gcc -I/path/to/periphery/src myprog.c /path/to/periphery/periphery.a -o myprog

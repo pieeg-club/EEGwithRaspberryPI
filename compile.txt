@@ -5,6 +5,6 @@ $ cd build
 $ cmake ..
 $ make
 
-and our C file created by 
+and our C file connected by 
 
 $ gcc -I/path/to/periphery/src myprog.c /path/to/periphery/periphery.a -o myprog

@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include "spi.h"
 #include "gpio.h"
+#include <unistd.h>
 
 int main(void) 
 {      
@@ -42,14 +43,14 @@ int main(void)
              }
            }        
           write_reg (0x14,0x80);//led
-          write_reg (0x05,0x00);//ch1
-          write_reg (0x06,0x00);//ch2
-          write_reg (0x07,0x00);//ch3
-          write_reg (0x08,0x00);//ch4
-          write_reg (0x09,0x00);//ch5
-          write_reg (0x0A,0x00);//ch6
-          write_reg (0x0B,0x00);//ch7
-          write_reg (0x0C,0x00);//ch8
+          write_reg (0x05,0x01);//ch1
+          write_reg (0x06,0x01);//ch2
+          write_reg (0x07,0x01);//ch3
+          write_reg (0x08,0x01);//ch4
+          write_reg (0x09,0x01);//ch5
+          write_reg (0x0A,0x01);//ch6
+          write_reg (0x0B,0x01);//ch7
+          write_reg (0x0C,0x01);//ch8
           write_reg (0x15,0x20);// mics
           write_reg (0x01,0x96);// reg1
           write_reg (0x02,0xD4);// reg2
@@ -70,14 +71,14 @@ int gpio_edge = gpio_set_edge (gpio_in, GPIO_EDGE_FALLING);
              printf(" GPIO_EDGE_FALLING_error"); 
         }
 int timeout_ms = 1000;
- 
-while (1)  
- {      
-        int gpio_res = gpio_poll (gpio_in, timeout_ms);  
-        
+FILE *file = fopen("data.txt", "w");
 
+while (1)  
+ {      usleep(100); 
+        int gpio_res = gpio_poll (gpio_in, timeout_ms);  
+      
         if (gpio_res == 1)
-        {   
+        {   //usleep(100); 
             gpio_edge_t edge = GPIO_EDGE_NONE;
             gpio_res = gpio_read_event (gpio_in, &edge, NULL);
             
@@ -87,7 +88,7 @@ while (1)
              printf("spi_send_error"); 
              }
             
-            
+      
                  for (int i = 1; i<9; i++)  
                 {              
                 int offset = 3*i;
@@ -101,8 +102,13 @@ while (1)
                     }
 
                   package[i-1]=0.27*voltage;   // (4.5*1000000/16777214)=0.27 
-                  printf("%.1f\n", package[3]); // 0 - first chanel
+                 // fprintf(file,"data");
+                  fprintf(file, "%.1f", package[i-1]);
+                  fprintf(file,"  ");
                 } 
+                  fprintf(file,"  \n");
+             
+            printf("%.1f\n", package[0]); // 0 - first chanel
       }
       else
       { 
@@ -114,6 +120,7 @@ while (1)
   spi_free(spi);
   gpio_close(gpio_in);
   gpio_free(gpio_in);
+  fclose(file);
 return 0;
 }
 

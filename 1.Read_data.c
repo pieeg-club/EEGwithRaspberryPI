@@ -43,7 +43,7 @@ int main(void)
              }
            }        
           write_reg (0x14,0x80);//led
-          write_reg (0x05,0x01);//ch1
+          write_reg (0x05,0x00);//ch1
           write_reg (0x06,0x01);//ch2
           write_reg (0x07,0x01);//ch3
           write_reg (0x08,0x01);//ch4
@@ -63,7 +63,7 @@ float package [8]={0};
 uint32_t data_test = 0x7FFFFF;
 uint32_t data_check = 0xFFFFFF;
 uint8_t zero27[27] = {0x00}; 
-
+// int count = 0;
 
 int gpio_edge = gpio_set_edge (gpio_in, GPIO_EDGE_FALLING);  
         if (gpio_edge == 0)
@@ -72,7 +72,7 @@ int gpio_edge = gpio_set_edge (gpio_in, GPIO_EDGE_FALLING);
         }
 int timeout_ms = 1000;
 FILE *file = fopen("data.txt", "w");
-
+fprintf(file,"ch1 ch2 ch3 ch4 ch5 ch6 ch7 ch8\n");
 while (1)  
  {      usleep(100); 
         int gpio_res = gpio_poll (gpio_in, timeout_ms);  
@@ -87,10 +87,12 @@ while (1)
              {
              printf("spi_send_error"); 
              }
-            
+                 // count=count+1;
+                 // fprintf(file, "%d", count);
       
                  for (int i = 1; i<9; i++)  
-                {              
+                {
+                                
                 int offset = 3*i;
                 uint32_t voltage = (buf[offset] << 8) | buf[offset+1];
                 voltage = (voltage << 8) | buf[offset+2];
@@ -103,8 +105,9 @@ while (1)
 
                   package[i-1]=0.27*voltage;   // (4.5*1000000/16777214)=0.27 
                  // fprintf(file,"data");
+                //   fprintf(file," ");
                   fprintf(file, "%.1f", package[i-1]);
-                  fprintf(file,"  ");
+                  fprintf(file," ");
                 } 
                   fprintf(file,"  \n");
              

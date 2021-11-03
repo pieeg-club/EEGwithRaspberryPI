@@ -1,3 +1,37 @@
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+dataset_y=[]
+dataset_x=[]
+x=0
+data = pd.read_csv('data.csv') #or .txt
+data=data['ch1 ch2 ch3 ch4 ch5 ch6 ch7 ch8'].str.split(' ', expand=True)
+
+for a in data[2]:  
+ dataset_y.append(float(a))
+ x=x+1
+ dataset_x.append(x)
+plt.plot(dataset_x,dataset_y)
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import numpy as np
 import pandas as pd
 from scipy import signal

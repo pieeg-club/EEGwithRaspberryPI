@@ -1,0 +1,23 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import csv
+line =['count\t' 'ch1\t' 'ch2\t' 'ch3\t' 'ch4\t' 'ch5\t' 'ch6\t' 'ch7\t' 'ch8\t' 'gomi\t' 'gomi']
+
+with open ('data.csv','r+') as f:
+ writer=csv.writer(f)
+ writer.writerow(line)
+
+x=0
+data = pd.read_csv('data.csv') #or .txt
+data=data['count	ch1	ch2	ch3	ch4	ch5	ch6	ch7	ch8	gomi	gomi'].str.split('\t', expand=True)
+
+#print (data)
+dataset_y=[]
+dataset_x=[]
+for a in data[3]:  
+ dataset_y.append(float(a))
+ x=x+1
+ dataset_x.append(x)
+
+plt.plot(dataset_x,dataset_y)
+plt.show()

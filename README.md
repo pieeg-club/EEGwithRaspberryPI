@@ -15,9 +15,6 @@ Connect the shield to Raspberry PI 3 or RaspberryPI4 and after that connect the 
 Full galvanic isolation from mains required.  
 This also applies to the monitor. Use only a monitor that is powered by the RaspberryPI.  
 #### Device pinout  
-
-#### Noise measure
-
 Shiled connceted with raspbberryPI only in the netxt points   
   43  +5V  
   44  GND  
@@ -25,6 +22,8 @@ Shiled connceted with raspbberryPI only in the netxt points
   34  MISO  
   35  CLKL  
   36  CS  
+  
+#### Noise measure
   
 #### Description of the code  
 For signal processing can be used Python scripts or Brainflow   

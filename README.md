@@ -24,7 +24,7 @@ Shiled connceted with raspbberryPI only in the netxt points
   36  CS  
   
 #### Noise measure
-In register Ch1 with the address 0x05 set - 01 for internal short circuit  
+In register Ch1 with the address 0x05 set - 0x01 for internal short circuit  
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/noise/img_2.jpg "general view")​
 In register Ch1 with the address 0x05 set - 00 for  short circuit used the cable  
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/noise/img_1.jpg "general view")​

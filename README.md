@@ -24,7 +24,12 @@ Shiled connceted with raspbberryPI only in the netxt points
   36  CS  
   
 #### Noise measure
-  
+![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/noise/img_1.jpg "general view")​
+
+![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/noise/img_2.jpg "general view")​
+
+
+
 #### Description of the code  
 For signal processing can be used Python scripts or Brainflow   
 #### Citation  

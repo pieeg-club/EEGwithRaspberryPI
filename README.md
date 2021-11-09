@@ -28,6 +28,8 @@ In register Ch1 with the address 0x05 set - 0x01 for internal short circuit (via
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/noise/img_2.jpg "general view")​
 In register Ch1 with the address 0x05 set - 00 for  short circuit used the cable (via timeflux)    
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/noise/img1.jpg "general view")​
+Chewing artifact 4-3-2-1
+![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.4.jpg "general view")​  
 
 
 #### Description of the code  

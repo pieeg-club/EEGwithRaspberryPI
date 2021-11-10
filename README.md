@@ -34,6 +34,10 @@ Chewing artifact 4-3-2-1
 
 #### Description of the code  
 For signal processing can be used Python scripts or Brainflow   
+
+
+#### For beginners
+
 #### Citation  
 Soon will be published   
 #### Contacts  

@@ -6,7 +6,8 @@
 -  [How it Works](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#how-it-works)
 -  [Noise measure](https://github.com/Ildaron/EEGwithRaspberryPI#noise-measure)
 -  [Device pinout](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#device-pinout)   
--  [Description of code](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#description-of-code)        
+-  [Description of code](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#description-of-code)    
+-  [For beginners](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#for-beginners)        
 -  [Citation](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#citation)   
 -  [Contacts](https://github.com/Ildaron/ironbci/blob/master/README.md#8-contacts)  
 
@@ -15,7 +16,7 @@ Connect the shield to Raspberry PI 3 or RaspberryPI4 and after that connect the 
 Full galvanic isolation from mains required.  
 This also applies to the monitor. Use only a monitor that is powered by the RaspberryPI.  
 #### Device pinout  
-Shiled connceted with raspbberryPI only in the netxt points   
+Shiled connceted with raspbberryPI only in the netxt points     
   43  +5V  
   44  GND  
   37  MOSI  

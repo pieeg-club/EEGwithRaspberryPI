@@ -32,7 +32,7 @@ In register Ch1 with the address 0x05 set - 00 for  short circuit used the cable
 Chewing artifact 4-3-2-1
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.4.jpg "general view")​  
 Blinking artifact, after Chewing
-![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.5.jpg "general view")​  
+![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.6.jpg "general view")​  
 
 #### Description of the code  
 For signal processing can be used Python scripts or Brainflow   

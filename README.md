@@ -38,6 +38,9 @@ Blinking artifact, after Chewing
 For signal processing can be used Python scripts or Brainflow   
 
 
+#### Video - Hardware and Signal processing demonstration
+(Soon be added)
+
 #### For beginners
 During the measurement, in addition to artifacts caused by muscle activity, be concerned about the increased resistance between the body and the floor. For example, in the picture below, the moment when the feet touch the floor with and without an insulated shoe. Without insulated shoes - increased noise is noticeable
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.5.jpg "general view")​  

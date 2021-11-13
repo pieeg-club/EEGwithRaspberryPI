@@ -16,6 +16,8 @@
 Connect the shield to Raspberry PI 3 or RaspberryPI4 and after that connect the device to a battery (power supply) and connect electrodes.
 Full galvanic isolation from mains required.  
 This also applies to the monitor. Use only a monitor that is powered by the RaspberryPI.  
+![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fi7.3.jpg "general view")​
+
 #### Device pinout  
 Shiled connceted with raspbberryPI only in the netxt points     
   43  +5V  

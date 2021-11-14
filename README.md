@@ -18,7 +18,7 @@ We will try to reveal the process of reading EEG signals as fully and clearly as
 #### How it Works   
 Connect the shield to Raspberry PI 3 or RaspberryPI4 and after that connect the device to a battery (power supply) and connect electrodes.
 Full galvanic isolation from mains required.  
-This also applies to the monitor. Use only a monitor that is powered by the RaspberryPI.  
+This also applies to the monitor. Use only a monitor that is powered by the RaspberryPI, as in the picture below, left. Electrodes positioned according to International 10-20 system, right.    
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.7.bmp "general view")​
 
 #### Device pinout  

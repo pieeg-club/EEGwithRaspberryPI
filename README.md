@@ -34,6 +34,8 @@ In register Ch1 with the address 0x05 set - 00 for  short circuit used the cable
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/noise/img1.jpg "general view")​
 Chewing artifact 4-3-2-1
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.4.jpg "general view")​  
+Chewing artifact 8 electrodes
+![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.8.jpg "general view")​  
 Blinking artifact, after Chewing
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.6.jpg "general view")​  
 

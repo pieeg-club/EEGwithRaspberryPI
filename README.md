@@ -1,4 +1,7 @@
 # The easiest way to neuroscience world with PIEEG (In progress) 
+This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.
+We will try to reveal the process of reading EEG signals as fully and clearly as possible. 
+
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=DIY%20Brain-Computer%20%20interface%20ironbci%20&url=https://github.com/Ildaron/ironbci&hashtags=RaspberryPI,EEG,python,opensource)
 
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.3.jpg "general view")​

@@ -1,4 +1,4 @@
-# The easiest way to neuroscience world with PIEEG (In progress) 
+# The easiest way to neuroscience world with PIEEG (In progress). Open-source 
 This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.
 We will try to reveal the process of reading EEG signals as fully and clearly as possible. 
 

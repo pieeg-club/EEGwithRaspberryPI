@@ -42,8 +42,8 @@ def butter_lowpass_filter(data, cutoff, fs, order=4):
     return y
 
 fps = 250
-cutoff_high=2
-cutoff_low=10
+cutoff_high=1
+cutoff_low=40
 
 print (dataset_y)
 filtered_sine_high = butter_highpass_filter(dataset_y, cutoff_high, fps)

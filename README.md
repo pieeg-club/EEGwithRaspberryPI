@@ -44,7 +44,7 @@ Blinking artifact, after Chewing
 Blinking artifact, after Chewing. Raw data (link)
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.9.row_dara.bmp "general view")​  
 Raw data (link) with band-pass filter (link)
-![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.10. band_bass.bmp "general view")​  
+![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.10.band_bass.bmp "general view")​  
 
 #### Description of the code  
 For signal processing can be used Python scripts or Brainflow   

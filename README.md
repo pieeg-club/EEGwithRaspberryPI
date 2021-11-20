@@ -45,7 +45,8 @@ Blinking artifact, after Chewing. [Raw data](https://github.com/Ildaron/EEGwithR
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.9.row_dara.bmp "general view")​  
 [Raw data](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/dataset/2.Blinking_Chewing.txt) with [band-pass filter](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/2.Data_filter.py) (1-40Hz)
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.10.band_bass.bmp "general view")​  
-
+Alpha wave detection eyes open, eyes closed  
+![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.11.alpha.bmp "general view")​  
 #### Description of the code  
 For signal processing can be used Python scripts or Brainflow   
 

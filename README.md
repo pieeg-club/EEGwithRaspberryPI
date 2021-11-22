@@ -52,7 +52,7 @@ For signal processing can be used Python scripts or Brainflow
 
 
 #### Video - Hardware and Signal processing demonstration
-[![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.12.bmp)](https://youtu.be/b-ovJ97vvQM)      
+[![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.13.bmp)](https://youtu.be/b-ovJ97vvQM)      
 
 
 #### For beginners

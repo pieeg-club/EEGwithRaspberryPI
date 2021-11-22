@@ -52,7 +52,8 @@ For signal processing can be used Python scripts or Brainflow
 
 
 #### Video - Hardware and Signal processing demonstration
-(Soon be added)
+[![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.12.bmp)](https://youtu.be/b-ovJ97vvQM)      
+
 
 #### For beginners
 During the measurement, in addition to artifacts caused by muscle activity, be concerned about the increased resistance between the body and the floor. For example, in the picture below, the moment when the feet touch the floor with and without an insulated shoe. Without insulated shoes - increased noise is noticeable

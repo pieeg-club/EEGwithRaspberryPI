@@ -48,7 +48,8 @@ Blinking artifact, after Chewing. [Raw data](https://github.com/Ildaron/EEGwithR
 Alpha wave detection eyes open, eyes closed  
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.11.alpha.bmp "general view")​  
 #### Description of the code  
-For signal processing can be used Python scripts or Brainflow   
+Python script dont allow reading data from ADS1299 with the frequency of 250 Hz. Necessary to use .c or .cpp scripts for reading data in real-time and python for signal processing and vialuzation 
+PIEEG integrated to Brainflow   
 
 
 #### Video - Hardware and Signal processing demonstration

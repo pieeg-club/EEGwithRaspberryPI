@@ -1,3 +1,5 @@
+// create file data.txt in the folder with the script 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>

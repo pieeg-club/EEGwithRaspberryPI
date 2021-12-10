@@ -31,15 +31,15 @@ Shiled connceted with raspbberryPI only in the netxt points
   36  CS  
   
 #### Noise measure
-In register Ch1 with the address 0x05 set - 0x01 for internal short circuit (by Brainflow via timeflux in Real-time)  
+In register Ch1 with the address 0x05 set - 0x01 for internal short circuit (via timeflux in Real-time)  
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/noise/img_2.jpg "general view")​
-In register Ch1 with the address 0x05 set - 00 for  short circuit used the cable (by Brainflow via timeflux in Real-time)   
+In register Ch1 with the address 0x05 set - 00 for  short circuit used the cable (via timeflux in Real-time)   
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/noise/img1.jpg "general view")​
-Chewing artifact 4-3-2-1 (by Brainflow via timeflux in Real-time)  
+Chewing artifact 4-3-2-1 (via timeflux in Real-time)  
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.4.jpg "general view")​  
-Chewing artifact 8 electrodes (by Brainflow via timeflux in Real-time)  
+Chewing artifact 8 electrodes (via timeflux in Real-time)  
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.8..jpg "general view")​  
-Blinking artifact, after Chewing (by Brainflow via timeflux in Real-time)  
+Blinking artifact, after Chewing (via timeflux in Real-time)  
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.6.jpg "general view")​  
 Blinking artifact, after Chewing. [Raw data](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/dataset/2.Blinking_Chewing.txt)
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.9.row_dara.bmp "general view")​  
@@ -49,7 +49,7 @@ Alpha wave detection eyes open, eyes closed
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.11.alpha.bmp "general view")​  
 #### Description of the code  
 Python script dont allow reading data from ADS1299 with the frequency of 250 Hz. Necessary to use .c or .cpp scripts for reading data in real-time and python for signal processing and vialuzation.   
-PIEEG integrated to Brainflow   
+ 
 
 
 #### Video - Hardware and Signal processing demonstration

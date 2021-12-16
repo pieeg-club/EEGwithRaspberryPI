@@ -6,12 +6,12 @@ import sys
 import pandas as pd
 from scipy import signal
 import matplotlib.pyplot as plt
+import threading
 
 np.set_printoptions(threshold=sys.maxsize)
 libc = ctypes.CDLL("./super_real_time_massive.so")
 libc.prepare()
 print("library ok")
-
 
 def receive_data():
     libc.real.restype = ndpointer(dtype = ctypes.c_int, shape=(sample_len,8))    
@@ -42,75 +42,101 @@ def butter_lowpass_filter(data, cutoffs, fs, order=5):
     y = signal.lfilter(b, a, data)
     return y
 
+def butter_bandpass(lowcut, highcut, fs, order=5):
+    nyq = 0.5 * fs
+    low = lowcut / nyq
+    high = highcut / nyq
+    b, a = signal.butter(order, [low, high], btype='band')
+    return b, a
+ 	 
+def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
+    b, a = butter_bandpass(lowcut, highcut, fs, order=order)
+    data = signal.lfilter(b, a, data)
+    return data
 
-def graph (ch):
+def graph (ch):    
     data = (data_array[:,[ch]])
-    data = list(data.flatten()) 
+    data = list(data.flatten())
+    data_for_shift_filter[0]=data[700:1000]   
+    data=data_for_shift_filter[0]+data                 
     data_high = butter_highpass_filter(data, cutoff, fps)
     data_low =  butter_lowpass_filter (data_high,cutoffs, fps)
-    data=data_low 
+    data_band = butter_bandpass_filter(data, cutoff, cutoffs,fps)  
+    data=data_band[300:1300]    
     return data
 
 sample_len = 1000
 fps = 250
 cutoff=2
-cutoffs = 50
+cutoffs = 30
 figure, (ax1,ax2,ax3,ax4,ax5,ax6,ax7,ax8) = plt.subplots(8, 1, sharex=True)
 axis_x=0
+y_minus_graph=100
+y_plus_graph=100
+x_minux_graph=5000
+x_plus_graph=50
 
 #plt.title('Channel 1')
 #plt.xlabel('sample')
 #plt.ylabel('EEG Voltage')
 
+def read_data_thread():
+    global data_was_received
+    data_was_received = False
+    while 1:       
+        global data_array
+        data_array=receive_data()
+        data_was_received = not data_was_received
 
-y_minus_graph=1000
-y_plus_graph=1000
-x_minux_graph=5000
-x_plus_graph=50
+def start_thread_read_data():
+    thread = threading.Thread(target=read_data_thread)
+    thread.start()
+
+
+start_thread_read_data()
+
+data_for_shift_filter=([[1,2,3],[1,2,3]])
+data_was_received_test=True
+
 while 1:
- # 1 channel  
-    data_array=receive_data()
-
-    data=graph(0)
-    ax1.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b0c')  
-    ax1.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
-
+    
+    if (data_was_received_test == data_was_received):
+        data_was_received_test = not data_was_received_test        
+ # 1 channel        
+        data=graph(0)
+        ax1.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b0c')  
+        ax1.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
  # 2 channel  
-    data=graph(1)
-    ax2.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b1c')  
-    ax2.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
- 
+        data=graph(1)
+        ax2.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b1c')  
+        ax2.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph]) 
  # 3 channel
-    data=graph(2)
-    ax3.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0bba')  
-    ax3.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
-
+        data=graph(2)
+        ax3.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0bba')  
+        ax3.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
  # 4 channel
-    data=graph(3)
-    ax4.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b9c')  
-    ax4.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
-
+        data=graph(3)
+        ax4.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b9c')  
+        ax4.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
  # 5 channel
-    data=graph(4)
-    ax5.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b4c')  
-    ax5.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
-
+        data=graph(4)
+        ax5.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b4c')  
+        ax5.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
  # 6 channel
-    data=graph(5)
-    ax6.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b2d')  
-    ax6.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
-
+        data=graph(5)
+        ax6.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b2d')  
+        ax6.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
  # 7 channel
-    data=graph(6)
-    ax7.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0bcc')  
-    ax7.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
-
+        data=graph(6)
+        ax7.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0bcc')  
+        ax7.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
  # 8 channel
-    data=graph(7)
-    ax8.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b0c')  
-    ax8.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
+        data=graph(7)
+        ax8.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b0c')  
+        ax8.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
 
-    axis_x=axis_x+sample_len      
-    plt.pause(0.000001)
-    plt.draw()
+        axis_x=axis_x+sample_len      
+        plt.pause(0.000001)
+        plt.draw()
+
 

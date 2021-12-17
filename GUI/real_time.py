@@ -8,6 +8,7 @@ from scipy import signal
 import matplotlib.pyplot as plt
 import threading
 
+
 np.set_printoptions(threshold=sys.maxsize)
 libc = ctypes.CDLL("./super_real_time_massive.so")
 libc.prepare()
@@ -54,17 +55,25 @@ def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
     data = signal.lfilter(b, a, data)
     return data
 
-def graph (ch):    
+def graph (ch):
+    global fill_array
     data = (data_array[:,[ch]])
     data = list(data.flatten())
-    data_for_shift_filter[0]=data[700:1000]   
-    data=data_for_shift_filter[0]+data                 
-    data_high = butter_highpass_filter(data, cutoff, fps)
-    data_low =  butter_lowpass_filter (data_high,cutoffs, fps)
-    data_band = butter_bandpass_filter(data, cutoff, cutoffs,fps)  
-    data=data_band[300:1300]    
-    return data
-
+    data_for_shift=data
+    if (fill_array==8):
+        data=data_for_shift_filter[ch]+data
+        #data_high = butter_highpass_filter(data, cutoff, fps)
+        #data_low =  butter_lowpass_filter (data_high,cutoffs, fps)
+        data_band = butter_bandpass_filter(data, cutoff, cutoffs,fps)
+        data=data_band[1000:2000]
+        data_for_shift_filter[ch]=data_for_shift
+        return data
+    else:
+        data_for_shift_filter[ch]=data
+        fill_array=fill_array+1
+        data=list(range(0,1000,1))
+        return data
+    
 sample_len = 1000
 fps = 250
 cutoff=2
@@ -95,14 +104,14 @@ def start_thread_read_data():
 
 start_thread_read_data()
 
-data_for_shift_filter=([[1,2,3],[1,2,3]])
+data_for_shift_filter=([[1],[2],[3],[4],[5],[6],[7],[8]])
 data_was_received_test=True
+fill_array=0
 
-while 1:
-    
+while 1: 
     if (data_was_received_test == data_was_received):
-        data_was_received_test = not data_was_received_test        
- # 1 channel        
+        data_was_received_test = not data_was_received_test            
+ # 1 channel
         data=graph(0)
         ax1.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b0c')  
         ax1.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])

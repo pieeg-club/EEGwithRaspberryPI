@@ -33,7 +33,7 @@ Shiled connceted with raspbberryPI only in the netxt points
 #### Noise measure
 
 
-Chewing artifact 4-3-2-1 (via real_time.py](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/GUI/real_time.py) 
+Chewing artifact 4-3-2-1 via [real_time.py](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/GUI/real_time.py) 
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.14.jpg "general view")​  
 
 Blinking artifact, after Chewing. [Raw data](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/dataset/2.Blinking_Chewing.txt)
@@ -53,7 +53,7 @@ Python script dont allow reading data from ADS1299 with the frequency of 250 Hz.
 
 #### For beginners
 During the measurement, in addition to artifacts caused by muscle activity, be concerned about the increased resistance between the body and the floor. For example, in the picture below, the moment when the feet touch the floor with and without an insulated shoe. Without insulated shoes - increased noise is noticeable
-![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.5.jpg "general view")​  
+
 
 
 

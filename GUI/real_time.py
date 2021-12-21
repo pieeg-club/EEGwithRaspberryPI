@@ -58,20 +58,19 @@ def graph (ch):
     global fill_array
     data = (data_array[:,[ch]])
     data = list(data.flatten())
-    data_for_shift=data
     if (fill_array==8):
-        data=data_for_shift_filter[ch]+data
+        data_for_filter=data_for_shift_filter[ch]+data
         #data_high = butter_highpass_filter(data, cutoff, fps)
         #data_low =  butter_lowpass_filter (data_high,cutoffs, fps)
-        data_band = butter_bandpass_filter(data, cutoff, cutoffs,fps)
-        data=data_band[1000:2000]
-        data_for_shift_filter[ch]=data_for_shift
-        return data
+        data_band = butter_bandpass_filter(data_for_filter, cutoff, cutoffs,fps)
+        data_after_filter=data_band[1000:2000]
+        data_for_shift_filter[ch]=data
+        return data_after_filter
     else:
         data_for_shift_filter[ch]=data
         fill_array=fill_array+1
-        data=list(range(0,1000,1))
-        return data
+        data_emtpy_only_one_time=list(range(0,1000,1))
+        return data_emtpy_only_one_time
     
 sample_len = 1000
 fps = 250
@@ -79,8 +78,8 @@ cutoff=2
 cutoffs = 30
 figure, (ax1,ax2,ax3,ax4,ax5,ax6,ax7,ax8) = plt.subplots(8, 1, sharex=True)
 axis_x=0
-y_minus_graph=100
-y_plus_graph=100
+y_minus_graph=500
+y_plus_graph=500
 x_minux_graph=5000
 x_plus_graph=50
 
@@ -100,7 +99,6 @@ def start_thread_read_data():
     thread = threading.Thread(target=read_data_thread)
     thread.start()
 
-
 start_thread_read_data()
 
 data_for_shift_filter=([[1],[2],[3],[4],[5],[6],[7],[8]])
@@ -118,5 +116,3 @@ while 1:
         axis_x=axis_x+sample_len      
         plt.pause(0.000001)
         plt.draw()
-
-

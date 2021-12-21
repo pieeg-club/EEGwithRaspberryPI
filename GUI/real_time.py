@@ -12,7 +12,6 @@ import threading
 np.set_printoptions(threshold=sys.maxsize)
 libc = ctypes.CDLL("./super_real_time_massive.so")
 libc.prepare()
-print("library ok")
 
 def receive_data():
     libc.real.restype = ndpointer(dtype = ctypes.c_int, shape=(sample_len,8))    

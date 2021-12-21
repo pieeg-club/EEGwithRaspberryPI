@@ -106,43 +106,15 @@ start_thread_read_data()
 data_for_shift_filter=([[1],[2],[3],[4],[5],[6],[7],[8]])
 data_was_received_test=True
 fill_array=0
+axis_ch=[ax1,ax2,ax3,ax4,ax5,ax6,ax7,ax8]
 
 while 1: 
     if (data_was_received_test == data_was_received):
         data_was_received_test = not data_was_received_test            
- # 1 channel
-        data=graph(0)
-        ax1.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b0c')  
-        ax1.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
- # 2 channel  
-        data=graph(1)
-        ax2.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b1c')  
-        ax2.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph]) 
- # 3 channel
-        data=graph(2)
-        ax3.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0bba')  
-        ax3.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
- # 4 channel
-        data=graph(3)
-        ax4.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b9c')  
-        ax4.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
- # 5 channel
-        data=graph(4)
-        ax5.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b4c')  
-        ax5.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
- # 6 channel
-        data=graph(5)
-        ax6.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b2d')  
-        ax6.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
- # 7 channel
-        data=graph(6)
-        ax7.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0bcc')  
-        ax7.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
- # 8 channel
-        data=graph(7)
-        ax8.plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b0c')  
-        ax8.axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
-
+        for channel in (range(0,8,1)):
+            data=graph(channel)
+            axis_ch[channel].plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b0c')
+            axis_ch[channel].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[500]+y_plus_graph])
         axis_x=axis_x+sample_len      
         plt.pause(0.000001)
         plt.draw()

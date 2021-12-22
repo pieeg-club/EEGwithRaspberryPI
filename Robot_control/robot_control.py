@@ -115,11 +115,6 @@ axis[1].set_ylabel('Amplitude')
 axis[0].set_title('Data after pass filter')
 axis[1].set_title('Fourier transform depicting the frequency components')
 
-print ("ok1")
-
-
-
-
 blinking_value = 5
 
 while 1: 

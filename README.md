@@ -1,4 +1,4 @@
-# The easiest way to the neuroscience world with the shield for RaspberryPi - [PIEEG](https://www.hackerbci.com/). Real-Time signal processing GUI in python.  Open-source. 
+# The easiest way to the neuroscience world with the shield for RaspberryPi - [PIEEG](https://www.hackerbci.com/). Real-Time signal processing GUI in python and for robot control. Open-source. 
 This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.
 We will try to reveal the process of reading EEG signals as fully and clearly as possible. 
 

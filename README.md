@@ -33,7 +33,7 @@ Shiled connceted with raspbberryPI only in the netxt points
 #### Noise measure
 
 
-Chewing artifact (4-3-2-1), in real-time for 8 electrodes via [real_time.py](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/GUI/real_time.py) 
+Chewing artifact (4-3-2-1) and blinking (4-3-2-1)), in real-time for 8 electrodes via [real_time.py](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/GUI/real_time.py) 
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.14.jpg "general view")​  
 
 Blinking artifact, after Chewing. [Raw data](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/dataset/2.Blinking_Chewing.txt)

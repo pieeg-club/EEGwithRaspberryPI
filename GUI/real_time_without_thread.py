@@ -43,7 +43,7 @@ class GUI:
 
     def _butter_highpass_filter(self, data, cutoff, fs, order=5):
         """"""  # 
-        b, a = self._butter_highpass(cutoff=cutoff, fs=fs, order=order)  # TODO Rename a, b
+        b, a = self._butter_highpass(cutoff=cutoff, fs=fs, order=order)  
         y = signal.filtfilt(b, a, data)
         return y
 
@@ -53,7 +53,7 @@ class GUI:
         nyq = 0.5 * fs
 
         normal_cutoff = cutoff / nyq
-        b, a = signal.butter(  # TODO Rename a, b
+        b, a = signal.butter(  
             order, normal_cutoff, btype='lowpass', analog=False
         )
         # b, a = signal.butter(8, 0.5, btype='lowpass')
@@ -61,7 +61,7 @@ class GUI:
 
     def _butter_lowpass_filter(self, data, cutoffs, fs, order=5):
         """"""  # TODO add comment
-        b, a = self._butter_lowpass(cutoffs, fs, order=order)  # TODO Rename a, b
+        b, a = self._butter_lowpass(cutoffs, fs, order=order)  #
         y = signal.lfilter(b, a, data)
         return y
 
@@ -71,12 +71,12 @@ class GUI:
         nyq = 0.5 * fs
         low = lowcut / nyq
         high = highcut / nyq
-        b, a = signal.butter(order, [low, high], btype='band')  # TODO Rename a, b
+        b, a = signal.butter(order, [low, high], btype='band')  # 
         return b, a
 
     def _butter_bandpass_filter(self, data, lowcut, highcut, fs, order=5):
         """"""  # TODO add comment
-        b, a = self._butter_bandpass(lowcut, highcut, fs, order=order)  # TODO Rename a, b
+        b, a = self._butter_bandpass(lowcut, highcut, fs, order=order)  #
         data = signal.lfilter(b, a, data)
         return data
 

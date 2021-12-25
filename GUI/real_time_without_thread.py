@@ -7,7 +7,7 @@ from scipy import signal
 import matplotlib.pyplot as plt
 
 
-class GUI:  # TODO Rename class
+class GUI:  
     """"""
 
     def __init__(self, path: str = "./super_real_time_massive.so"):
@@ -33,7 +33,7 @@ class GUI:  # TODO Rename class
 
     @staticmethod
     def _butter_highpass(cutoff, fs, order: int =3):
-        """"""  # TODO add comment
+        """"""  # 
         nyq = 0.5 * fs
         normal_cutoff = cutoff / nyq
         b, a = signal.butter(   # TODO Rename a, b
@@ -42,14 +42,14 @@ class GUI:  # TODO Rename class
         return b, a
 
     def _butter_highpass_filter(self, data, cutoff, fs, order=5):
-        """"""  # TODO add comment
+        """"""  # 
         b, a = self._butter_highpass(cutoff=cutoff, fs=fs, order=order)  # TODO Rename a, b
         y = signal.filtfilt(b, a, data)
         return y
 
     @staticmethod
     def _butter_lowpass(cutoff, fs, order=3):
-        """"""  # TODO add comment
+        """"""  # 
         nyq = 0.5 * fs
 
         normal_cutoff = cutoff / nyq
@@ -67,7 +67,7 @@ class GUI:  # TODO Rename class
 
     @staticmethod
     def _butter_bandpass(lowcut, highcut, fs, order=5):
-        """"""  # TODO add comment
+        """"""  # 
         nyq = 0.5 * fs
         low = lowcut / nyq
         high = highcut / nyq
@@ -102,7 +102,7 @@ class GUI:  # TODO Rename class
             return data_emtpy_only_one_time
 
     def plot(self):
-        """"""  # TODO add comment
+        """"""  
         sample_len = 1000
         figure, (ax1, ax2, ax3, ax4, ax5, ax6, ax7, ax8) = plt.subplots(8, 1, sharex=True)
         axis_x = 0

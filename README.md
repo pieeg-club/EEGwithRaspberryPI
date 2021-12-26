@@ -16,6 +16,12 @@ We will try to reveal the process of reading EEG signals as fully and clearly as
 -  [Contacts](https://github.com/Ildaron/ironbci/blob/master/README.md#8-contacts)  
 
 #### How it Works   
+ [1.1.Read_data.c](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/1.1.Read_data.c) C script for read data in real-time and save to txt file 
+ [1.2.Read_data.cpp](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/1.2.Read_data.cpp) C++ script for read data in real-time and save to txt file 
+ 
+
+
+
 Connect the shield to Raspberry PI 3 or RaspberryPI4 and after that connect the device to a battery (power supply) and connect electrodes.
 Full galvanic isolation from mains required.  
 This also applies to the monitor. Use only a monitor that is powered by the RaspberryPI, as in the picture below, left. Electrodes positioned according to International 10-20 system, right.    

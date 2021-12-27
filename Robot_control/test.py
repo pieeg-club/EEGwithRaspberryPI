@@ -37,14 +37,14 @@ def graph ():
     print (data)
     data = list(data.flatten())
     if (fill_array==1):
-        data_for_filter=data_for_shift_filter[0]+data
+        data_for_filter=data_for_shift_filter[0]+data # самый важнеый момент - тут скалдываю данные , текушие и за прошлый шаг
 
-        data_for_shift_filter[0]=data
+        data_for_shift_filter[0]=data # тут я пытаюсь запиать данные для шага назад в след цикле
         print (type (data))
         print (type (data_for_shift_filter[0]))
         return data_for_filter
     
-    else:
+    else:  # это надо так как я  передаю данные на фимльтр текушие и за прошлый сеанс, а в первый раз чтения данных за прошлый сеанс  данных нету, это один раз только обрабытвается 
         data_for_shift_filter[0]=data
         fill_array=fill_array+1
         data_emtpy_only_one_time=list(range(0,2000,1))
@@ -52,13 +52,13 @@ def graph ():
 
 
 
-sample_len = 1000
+sample_len = 1000  # это в си файле читаю в течение 4 секунд
 fps = 250
 cutoff=1
 cutoffs = 40
 fill_array=0
 
-def read_data_thread():
+def read_data_thread(): # поток как этот код для разберри пи, а он медленный , ему время надо через фильтры данные провести и отобразить на графики
     global data_was_received
     data_was_received = False
     while 1:       
@@ -73,9 +73,9 @@ thread.start()
 
 
 
-data_for_shift_filter=([[1]])
+data_for_shift_filter=([[1]]) # только один канал - это для примера так как
 
-data_was_received_test=True
+data_was_received_test=True  #
 
 
 samplingFrequency   =  200 
@@ -101,9 +101,9 @@ while 1:
         print (data_was_received_test)
         data_was_received_test = not data_was_received_test
         
-        axis[0].cla()
-        axis[1].cla()
-        axis[2].cla()
+        axis[0].cla() # эти данные за 2 сеанса без фильтра
+        axis[1].cla() # эти данные за один смейанс 
+        axis[2].cla() # этро за 2 сеанса рп
         
         filtered_high_pass_row=graph()
         filtered_high_pass = butter_bandpass_filter(filtered_high_pass_row, cutoff, cutoffs,fps)

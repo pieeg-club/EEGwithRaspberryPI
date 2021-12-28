@@ -108,11 +108,6 @@ while 1:
         filtered_high_pass_row=graph()
         filtered_high_pass = butter_bandpass_filter(filtered_high_pass_row, cutoff, cutoffs,fps)
                
-        endTime             = int(len(filtered_high_pass)/250); 
-        time  = np.arange(0, (len(filtered_high_pass)/250),1/250);
-        time_Short=(len(time))/2
-        time_long=len(time)
-
         filtered_high_pass_Short=(len(filtered_high_pass))/2
         filtered_high_pass_long=len(filtered_high_pass)
         

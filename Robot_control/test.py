@@ -1,4 +1,3 @@
-import scipy.fftpack
 import ctypes
 import time
 import numpy as np
@@ -50,8 +49,6 @@ def graph ():
         data_emtpy_only_one_time=list(range(0,2000,1))
         return data_emtpy_only_one_time
 
-
-
 sample_len = 1000  # I read it in the C file for 4 seconds
 fps = 250
 cutoff=1
@@ -70,8 +67,6 @@ def read_data_thread(): # Thread- since this code for not powerful RaspberryPI. 
 thread = threading.Thread(target=read_data_thread)
 thread.start()
 
-
-
 data_for_shift_filter=([[1]]) #only one channel is for example because
 data_was_received_test=True  
 samplingFrequency   =  200 
@@ -79,30 +74,15 @@ beginTime           = 0;
 
 figure, axis = plt.subplots(1, 1)
 plt.subplots_adjust(hspace=1)
-axis[0].set_xlabel('Time')
-axis[0].set_ylabel('Amplitude')
-axis[0].set_title('Row_data')
 
 while 1: 
     if (data_was_received_test == data_was_received):
         print (data_was_received_test) # I check that NEW!!! data was received from C file
         data_was_received_test = not data_was_received_test
-       
         axis[0].cla()# this data with shift, filter work only for current session        
         filtered_high_pass_row=graph()
         filtered_high_pass = butter_bandpass_filter(filtered_high_pass_row, cutoff, cutoffs,fps)
-        print (len(time))
-        print (len(filtered_high_pass)) 
         axis[0].plot(time, filtered_high_pass_row)
         plt.pause(0.000001) 
 plt.show()
 
-
-
-
-
-
-
-
-
-        

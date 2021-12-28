@@ -98,7 +98,7 @@ axis[2].set_title('Row_data')
 
 while 1: 
     if (data_was_received_test == data_was_received):
-        print (data_was_received_test)
+        print (data_was_received_test) # I check that NEW!!! data was received from C file
         data_was_received_test = not data_was_received_test
         
         axis[0].cla() # this data for 2 sessions with filter

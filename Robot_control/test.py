@@ -10,11 +10,11 @@ import matplotlib.pyplot as plt
 import threading
 
 np.set_printoptions(threshold=sys.maxsize)
-libc = ctypes.CDLL("./super_real_time_massive.so")
+libc = ctypes.CDLL("./super_real_time_massive.so")  # libr for read from c file   https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/GUI/real_time_massive.h
 libc.prepare()
 
 def receive_data():
-    libc.real.restype = ndpointer(dtype = ctypes.c_int, shape=(sample_len,8))    
+    libc.real.restype = ndpointer(dtype = ctypes.c_int, shape=(sample_len,8))  # read from c file  
     data=libc.real()
     return data
 
@@ -33,18 +33,18 @@ def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
 def graph ():
     global fill_array
     print (data_array)
-    data = (data_array[:,[0]])
+    data = (data_array[:,[0]]) # take only 1 channel 
     print (data)
     data = list(data.flatten())
     if (fill_array==1):
-        data_for_filter=data_for_shift_filter[0]+data # самый важнеый момент - тут скалдываю данные , текушие и за прошлый шаг
+        data_for_filter=data_for_shift_filter[0]+data # the most important point - here I add up the data, current and for the last step
 
-        data_for_shift_filter[0]=data # тут я пытаюсь запиать данные для шага назад в след цикле
+        data_for_shift_filter[0]=data # here I write data for a step back in the next loop
         print (type (data))
         print (type (data_for_shift_filter[0]))
         return data_for_filter
     
-    else:  # это надо так как я  передаю данные на фимльтр текушие и за прошлый сеанс, а в первый раз чтения данных за прошлый сеанс  данных нету, это один раз только обрабытвается 
+    else:  # This is necessary since I transfer data to the filter - "current" and "for the last session", but the first time I read the data "for the last session" there is no data. Used it, only 1 time
         data_for_shift_filter[0]=data
         fill_array=fill_array+1
         data_emtpy_only_one_time=list(range(0,2000,1))
@@ -58,7 +58,7 @@ cutoff=1
 cutoffs = 40
 fill_array=0
 
-def read_data_thread(): # поток как этот код для разберри пи, а он медленный , ему время надо через фильтры данные провести и отобразить на графики
+def read_data_thread(): # Thread- since this code for not powerful RaspberryPI. Needs to pass the data through filters and display it on graphs
     global data_was_received
     data_was_received = False
     while 1:       
@@ -73,7 +73,7 @@ thread.start()
 
 
 
-data_for_shift_filter=([[1]]) # только один канал - это для примера так как
+data_for_shift_filter=([[1]]) #only one channel is for example because
 
 data_was_received_test=True  #
 
@@ -101,9 +101,9 @@ while 1:
         print (data_was_received_test)
         data_was_received_test = not data_was_received_test
         
-        axis[0].cla() # эти данные за 2 сеанса без фильтра
-        axis[1].cla() # эти данные за один смейанс 
-        axis[2].cla() # этро за 2 сеанса рп
+        axis[0].cla() # this data for 2 sessions with filter
+        axis[1].cla() # this data in one session without filter
+        axis[2].cla() # this data with shift, filter work only for current session
         
         filtered_high_pass_row=graph()
         filtered_high_pass = butter_bandpass_filter(filtered_high_pass_row, cutoff, cutoffs,fps)

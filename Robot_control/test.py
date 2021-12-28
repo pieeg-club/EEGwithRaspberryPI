@@ -87,20 +87,13 @@ while 1:
     if (data_was_received_test == data_was_received):
         print (data_was_received_test) # I check that NEW!!! data was received from C file
         data_was_received_test = not data_was_received_test
-        
+       
         axis[0].cla()# this data with shift, filter work only for current session        
         filtered_high_pass_row=graph()
         filtered_high_pass = butter_bandpass_filter(filtered_high_pass_row, cutoff, cutoffs,fps)
-               
-        filtered_high_pass_Short=(len(filtered_high_pass))/2
-        filtered_high_pass_long=len(filtered_high_pass)
-        
-        axis[0].plot(time, filtered_high_pass)
         print (len(time))
-        print (len(filtered_high_pass))
-        axis[1].plot(time[1000:2000], filtered_high_pass[1000:2000])
-        
-        axis[2].plot(time, filtered_high_pass_row)
+        print (len(filtered_high_pass)) 
+        axis[0].plot(time, filtered_high_pass_row)
         plt.pause(0.000001) 
 plt.show()
 

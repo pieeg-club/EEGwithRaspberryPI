@@ -1,4 +1,4 @@
-opyright (c) 2021 Ildar Rakhmatulin
+Copyright (c) 2022 Ildar Rakhmatulin
 GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 

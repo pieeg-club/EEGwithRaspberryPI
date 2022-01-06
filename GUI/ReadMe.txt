@@ -10,3 +10,4 @@ $ cmake ..
 $ make
 
 and for .so
+gcc -shared -home/pi/Desktop/new_spi/c-periphery-master/src real_time_massive.c /home/pi/Desktop/new_spi/c-periphery-master/build/libperiphery.a -o super_real_time_massive.so

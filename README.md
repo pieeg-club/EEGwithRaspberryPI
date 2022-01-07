@@ -56,7 +56,7 @@ Python script dont allow reading data from ADS1299 with the frequency of 250 Hz.
 
 
 #### Video - Hardware and Signal processing demonstration
-[![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.13.bmp)](https://youtu.be/b-ovJ97vvM)      
+[![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.13.bmp)](https://youtu.be/b-ovJ97vvQM)      
 
 
 #### For beginners

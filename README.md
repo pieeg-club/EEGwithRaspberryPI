@@ -66,7 +66,7 @@ During the measurement, in addition to artifacts caused by muscle activity, be c
 
 
 #### Citation  
-PIEEG: Turn a Raspberry Pi into a Brain-Computer-Interface to measure biosignals. [arXiv:2201.02228](https://arxiv.org/abs/2201.02228)  
+Rakhmatulin, I., Volkl, S. (2020). PIEEG: Turn a Raspberry Pi into a Brain-Computer-Interface to measure biosignals. arXiv:2201.02228, https://arxiv.org/abs/2201.02228  
 
 #### Contacts  
 ildar.o2010@yandex.ru 

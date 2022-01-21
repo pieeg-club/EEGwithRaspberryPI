@@ -13,7 +13,7 @@ We will try to reveal the process of reading EEG signals as fully and clearly as
 -  [Video-hardware and signal processing demonstration](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#video---hardware-and-signal-processing-demonstration) 
 -  [For beginners](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#for-beginners)        
 -  [Citation](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/README.md#citation)   
--  [Contacts](https://github.com/Ildaron/ironbci/blob/master/README.md#7-contacts)  
+-  [Contacts](https://github.com/Ildaron/EEGwithRaspberryPI#contacts)  
 
 #### How it Works   
  [1.1.Read_data.c](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/1.1.Read_data.c) C script for read data in real-time and save to txt file  

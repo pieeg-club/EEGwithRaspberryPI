@@ -70,6 +70,7 @@ Rakhmatulin, I., Volkl, S. (2020). PIEEG: Turn a Raspberry Pi into a Brain-Compu
 
 #### Contacts  
 ildar.o2010@yandex.ru  
-[linkedin](https://www.linkedin.com/in/ildar-rakhmatulin-262a66112/)
-
+[linkedin](https://www.linkedin.com/in/ildar-rakhmatulin-262a66112/)  
+Slack - pieeg.slack.com  
+Web-Site - [hackerbci](https://www.[hackerbci].com/)  
 

@@ -16,7 +16,7 @@ We will try to reveal the process of reading EEG signals as fully and clearly as
 -  [Contacts](https://github.com/Ildaron/EEGwithRaspberryPI#contacts)  
 
 #### Warning 
-The device must operate only from a battery - 5 V. Complete isolation from the mains power.! The device is NOT a medical device and it MUST not be connected to any kind of mains power, via USB or otherwise   
+The device must operate only from a battery - 5 V. Complete isolation from the mains power.! The device MUST not be connected to any kind of mains power, via USB or otherwise   
 
 #### How it Works   
  [1.1.Read_data.c](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/1.1.Read_data.c) C script for read data in real-time and save to txt file  

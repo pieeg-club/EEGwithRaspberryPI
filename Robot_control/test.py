@@ -18,9 +18,22 @@ def receive_data():
     print (len(data))
     return data
 
+def butter_bandpass(lowcut, highcut, fs, order=5):
+    nyq = 0.5 * fs
+    low = lowcut / nyq
+    high = highcut / nyq
+    b, a = signal.butter(order, [low, high], btype='band')
+    return b, a
+ 	 
+def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
+    b, a = butter_bandpass(lowcut, highcut, fs, order=order)
+    data = signal.lfilter(b, a, data)
+    return data
+
 def graph ():
     global fill_array
-    data = (data_array[:,[0]]) # take only 1 channel 
+    data = (data_array[:,[0]]) # take only 1 channel
+    
     data = list(data.flatten())  # len = 1000
     if (fill_array==1):
         data_for_filter=data_for_shift_filter[0]+data # the most important point - here I add up the data, current and for the last step
@@ -35,6 +48,8 @@ def graph ():
 
 sample_len = 1000  # I read it in the C file for 4 seconds
 fps = 250
+cutoff=1
+cutoffs = 40
 fill_array=0
 
 def read_data_thread(): # Thread- since this code for not powerful RaspberryPI. Needs to pass the data through filters and display it on graphs
@@ -42,7 +57,8 @@ def read_data_thread(): # Thread- since this code for not powerful RaspberryPI. 
     data_was_received = False
     while 1:       
         global data_array
-        data_array=receive_data()
+        data_arrays=receive_data()
+        data_array=data_arrays.copy()
         data_was_received = not data_was_received
         
 thread = threading.Thread(target=read_data_thread)
@@ -51,7 +67,7 @@ thread.start()
 data_for_shift_filter=([[1]]) #only one channel is for example because
 data_was_received_test=True  
 samplingFrequency   =  200 
-
+beginTime           = 0;
 
 figure, axis = plt.subplots(1, 1)
 plt.subplots_adjust(hspace=1)
@@ -64,7 +80,10 @@ while 1:
     if (data_was_received_test == data_was_received):
         data_was_received_test = not data_was_received_test
         axis.cla() # this data with shift, filter work only for current session        
-        row_data=graph()        
-        axis.plot(times, row_data)
+        filtered_high_pass_row=graph()
+        #filtered_high_pass = butter_bandpass_filter(filtered_high_pass_row, cutoff, cutoffs,fps)
+
+        
+        axis.plot(times, filtered_high_pass_row)
         plt.pause(0.000001) 
 plt.show()

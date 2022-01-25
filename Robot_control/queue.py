@@ -8,20 +8,26 @@ from scipy import signal
 import matplotlib.pyplot as plt
 import threading
 
+from multiprocessing import Process, Queue
+
+
 np.set_printoptions(threshold=sys.maxsize)
 libc = ctypes.CDLL("./super_real_time_massive.so")  # libr for read from c file   https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/GUI/real_time_massive.h
 libc.prepare()
 
 def receive_data():
+    print ("ok1")
     libc.real.restype = ndpointer(dtype = ctypes.c_int, shape=(sample_len,8))  # read from c file  
     data=libc.real()
     print (len(data))
     queue.put(data) 
     #return data
 
-def graph ():
+def graph (queue):
+    print ("ok")
     global fill_array
     data_array = queue.get()
+    print ("ok2")
     data = (data_array[:,[0]]) # take only 1 channel 
     data = list(data.flatten())  # len = 1000
     if (fill_array==1):
@@ -62,15 +68,17 @@ for a in range (0,2000,1):
  times = np.append (times, a)
 
 while 1:
+    pqueue=Queue()
     reader_p = Process(target=receive_data, args=((pqueue),))
     reader_p.daemon = True
     reader_p.start()  
-
+    print ("ok3")
     
 #    if (data_was_received_test == data_was_received):
 #     data_was_received_test = not data_was_received_test
     axis.cla() # this data with shift, filter work only for current session        
-    row_data=graph()        
+    row_data=graph(pqueue)
+    print ("ok4")
     axis.plot(times, row_data)
     plt.pause(0.000001) 
 plt.show()

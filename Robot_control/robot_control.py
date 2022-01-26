@@ -21,7 +21,8 @@ libc.prepare()
 
 def receive_data():
     libc.real.restype = ndpointer(dtype = ctypes.c_int, shape=(sample_len,8))    
-    data=libc.real()
+    datas=libc.real()
+    data=datas.copy()
     return data
 
 def butter_highpass(cutoff, fs, order=3):

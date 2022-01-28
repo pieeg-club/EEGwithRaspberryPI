@@ -1,4 +1,3 @@
-import scipy.fftpack
 import ctypes
 import time
 import numpy as np
@@ -9,14 +8,14 @@ from scipy import signal
 import matplotlib.pyplot as plt
 import threading
 from RPi import GPIO
+import scipy.fftpack
 
 GPIO.setmode(GPIO.BOARD)
-
 GPIO.setup(31, GPIO.OUT)
 GPIO.setup(35, GPIO.OUT)
 
 np.set_printoptions(threshold=sys.maxsize)
-libc = ctypes.CDLL("./super_real_time_massive.so")
+libc = ctypes.CDLL("./super_real_time_massive_sec.so")
 libc.prepare()
 
 def receive_data():
@@ -24,30 +23,6 @@ def receive_data():
     datas=libc.real()
     data=datas.copy()
     return data
-
-def butter_highpass(cutoff, fs, order=3):
-    nyq = 0.5 * fs
-    normal_cutoff = cutoff / nyq
-    b, a = signal.butter(order, normal_cutoff, btype='high', analog=False)
-    return b, a
-
-def butter_highpass_filter(data, cutoff, fs, order=5):
-    b, a = butter_highpass(cutoff, fs, order=order)
-    y = signal.filtfilt(b, a, data)
-    return y
-
-def butter_lowpass(cutoffs, fs, order=3):
-    nyq = 0.5 * fs
-  
-    normal_cutoff = cutoff / nyq
-    b, a = signal.butter(order, normal_cutoff, btype='lowpass', analog=False)
-    #b, a = signal.butter(8, 0.5, btype='lowpass')
-    return b, a
-
-def butter_lowpass_filter(data, cutoffs, fs, order=5):
-    b, a = butter_lowpass(cutoffs, fs, order=order)
-    y = signal.lfilter(b, a, data)
-    return y
 
 def butter_bandpass(lowcut, highcut, fs, order=5):
     nyq = 0.5 * fs
@@ -61,28 +36,122 @@ def butter_bandpass_filter(data, lowcut, highcut, fs, order=5):
     data = signal.lfilter(b, a, data)
     return data
 
-def graph (ch):
-    global fill_array
-    data = (data_array[:,[ch]])
-    data = list(data.flatten())
-    if (fill_array==1):
-        data_for_filter=data_for_shift_filter[ch]+data
-        #data_high = butter_highpass_filter(data, cutoff, fps)
-        #data_low =  butter_lowpass_filter (data_high,cutoffs, fps)
-        data_band = butter_bandpass_filter(data_for_filter, cutoff, cutoffs,fps)
-        data_after_filter=data_band[1000:2000]
-        data_for_shift_filter[ch]=data
-        return data_after_filter
-    else:
-        data_for_shift_filter[ch]=data
-        fill_array=fill_array+1
-        data_emtpy_only_one_time=list(range(0,1000,1))
-        return data_emtpy_only_one_time
-    
-sample_len = 1000
+def graph (ch,a):
+ data = (data_array[:,[ch]])
+ data = list(data.flatten())
+ 
+ sine ['data'+str(a)] = data
+ if a==0:
+  z = sine ['data1']           
+  z = np.append(z, (sine ['data2']))
+  z = np.append(z, (sine ['data3']))
+  z = np.append(z, (sine ['data4']))
+  z = np.append(z, (sine ['data5']))
+  z = np.append(z, (sine ['data6']))
+  z = np.append(z, (sine ['data7']))
+  z = np.append(z, (sine ['data0']))
+ if a==1:
+  z = sine ['data2']          
+  z = np.append(z, (sine ['data3']))
+  z = np.append(z, (sine ['data4']))
+  z = np.append(z, (sine ['data5']))
+  z = np.append(z, (sine ['data6']))
+  z = np.append(z, (sine ['data7']))
+  z = np.append(z, (sine ['data0']))
+  z = np.append(z, (sine ['data1']))                      
+ if a==2:
+  z = sine ['data3']         
+  z = np.append(z, (sine ['data4']))
+  z = np.append(z, (sine ['data5']))
+  z = np.append(z, (sine ['data6']))
+  z = np.append(z, (sine ['data7']))
+  z = np.append(z, (sine ['data0']))
+  z = np.append(z, (sine ['data1']))
+  z = np.append(z, (sine ['data2']))                        
+ if a==3:
+  z = sine ['data4']   
+  z = np.append(z, (sine ['data5']))
+  z = np.append(z, (sine ['data6']))
+  z = np.append(z, (sine ['data7']))
+  z = np.append(z, (sine ['data0']))
+  z = np.append(z, (sine ['data1']))
+  z = np.append(z, (sine ['data2']))
+  z = np.append(z, (sine ['data3']))            
+ if a==4:      
+  z = sine ['data5']   
+  z = np.append(z, (sine ['data6']))
+  z = np.append(z, (sine ['data7']))
+  z = np.append(z, (sine ['data0']))
+  z = np.append(z, (sine ['data1']))
+  z = np.append(z, (sine ['data2']))
+  z = np.append(z, (sine ['data3']))
+  z = np.append(z, (sine ['data4']))            
+ if a==5:       
+  z = sine ['data6']   
+  z = np.append(z, (sine ['data7']))
+  z = np.append(z, (sine ['data0']))
+  z = np.append(z, (sine ['data1']))
+  z = np.append(z, (sine ['data2']))
+  z = np.append(z, (sine ['data3']))
+  z = np.append(z, (sine ['data4']))
+  z = np.append(z, (sine ['data5']))            
+ if a==6:      
+  z = sine ['data7']        
+  z = np.append(z, (sine ['data0']))
+  z = np.append(z, (sine ['data1']))
+  z = np.append(z, (sine ['data2']))
+  z = np.append(z, (sine ['data3']))
+  z = np.append(z, (sine ['data4']))
+  z = np.append(z, (sine ['data5']))
+  z = np.append(z, (sine ['data6']))          
+ if a==7:        
+  z = sine ['data0']     
+  z = np.append(z, (sine ['data1']))
+  z = np.append(z, (sine ['data2']))
+  z = np.append(z, (sine ['data3']))
+  z = np.append(z, (sine ['data4']))
+  z = np.append(z, (sine ['data5']))
+  z = np.append(z, (sine ['data6']))
+  z = np.append(z, (sine ['data7']))
+ 
+ #data = pd.DataFrame({'data': z} )
+  
+ data = z
+ #print ('sine', data[250:])
+ data_band = butter_bandpass_filter(data, cutoff, cutoffs,fps)
+
+ data_after_filter=data_band[1750:]
+ return data_after_filter
+
+sines=list(range(0,250,1))
+sine = pd.DataFrame({'data': sines} )
+zet=sine.values
+sine ['data0'] = sine
+sine ['data1'] = zet
+sine ['data2'] = zet
+sine ['data3'] = zet
+sine ['data4'] = zet
+sine ['data5'] = zet
+sine ['data6'] = zet
+sine ['data7'] = zet
+
+sample_len = 250
 fps = 250
 cutoff=1
-cutoffs = 40
+cutoffs = 30
+
+figure, axis = plt.subplots(2, 1)
+plt.subplots_adjust(hspace=1)
+
+axis_x=0
+y_minus_graph=100
+y_plus_graph=100
+x_minux_graph=5000
+x_plus_graph=50
+
+#plt.title('Channel 1')
+#plt.xlabel('sample')
+#plt.ylabel('EEG Voltage')
 
 def read_data_thread():
     global data_was_received
@@ -102,41 +171,43 @@ data_for_shift_filter=([[1],[2],[3],[4],[5],[6],[7],[8]])
 data_was_received_test=True
 fill_array=0
 
-samplingFrequency   =  250 
-beginTime           = 0;
-
-figure, axis = plt.subplots(2, 1)
-plt.subplots_adjust(hspace=1)
-
 axis[0].set_xlabel('Time')
 axis[0].set_ylabel('Amplitude')
-axis[1].set_xlabel('Frequency')
-axis[1].set_ylabel('Amplitude')
-
 axis[0].set_title('Data after pass filter')
-axis[1].set_title('Fourier transform depicting the frequency components')
-
+samplingFrequency   =  250 
 blinking_value = 5
 
+
+a=0
 while 1: 
     if (data_was_received_test == data_was_received):
         data_was_received_test = not data_was_received_test
+
         axis[1].cla()
-        axis[0].cla()
+        axis[1].set_title('Fourier transform depicting the frequency components')
+        axis[1].set_xlabel('Frequency')
+        axis[1].set_ylabel('Amplitude')
+        #for channel in (range(0,8,1)):
+        channel=1
 
-        filtered_high_pass=graph(0)
+        data=graph(channel,a)
+        a=a+1
+        if (a == 8):
+         a=0
 
-        endTime             = int(len(filtered_high_pass)/250); 
-        time  = np.arange(0, (len(filtered_high_pass)/250),1/250);
-        axis[0].plot(time, filtered_high_pass)
-
-        fourierTransform = np.fft.fft(filtered_high_pass)/len(filtered_high_pass)           
-        fourierTransform = fourierTransform[range(int(len(filtered_high_pass)/2))] 
-        tpCount     = len(filtered_high_pass)
+        fourierTransform = np.fft.fft(data)/len(data)           
+        fourierTransform = fourierTransform[range(int(len(data)/2))] 
+        tpCount     = len(data)
         values      = np.arange(int(tpCount/2))
         timePeriod  = tpCount/samplingFrequency
         frequencies = values/timePeriod
-        axis[1].plot(frequencies, abs(fourierTransform))
+
+        axis[1].plot(frequencies, abs(fourierTransform))        
+        axis[1].axis([0, 125, 0, 20])        
+        axis[0].plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b0c')
+        axis[0].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[150]+y_plus_graph])
+
+        axis_x=axis_x+sample_len      
         plt.pause(0.000001)
 
         if (blinking_value>max(abs(fourierTransform[100:250]))):
@@ -144,17 +215,5 @@ while 1:
             GPIO.output(35, False)
         else:
             GPIO.output(31, False)
-            GPIO.output(35, True)            
-
-    
-plt.show()
-
-
-
-
-
-
-
-
-
-        
+            GPIO.output(35, True)                    
+        plt.draw()

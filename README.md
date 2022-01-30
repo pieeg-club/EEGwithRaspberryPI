@@ -44,8 +44,8 @@ Shiled connceted with raspbberryPI only in the netxt points
 #### Noise measure
 
 
-Chewing artifact (4-3-2-1) and blinking (only 4 times), in real-time for 8 electrodes via [real_time.py](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/GUI/real_time.py) without low-pass filter!!!! Only high-pass filter  
-![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.14.jpg "general view")​  
+Chewing artifact (4-3-2-1) and blinking (only 4 times), in real-time for 8 electrodes via [real_time.py](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/GUI/real_time.py) high-pass filter 1-30 Hz    
+![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.16.jpg "general view")​  
 
 Blinking artifact, after Chewing. [Raw data](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/dataset/2.Blinking_Chewing.txt)
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.9.row_dara.bmp "general view")​  

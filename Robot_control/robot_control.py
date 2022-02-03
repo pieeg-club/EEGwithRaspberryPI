@@ -203,14 +203,14 @@ while 1:
         frequencies = values/timePeriod
 
         axis[1].plot(frequencies, abs(fourierTransform))        
-        axis[1].axis([0, 125, 0, 20])        
+        axis[1].axis([0, 35, 0, 20])        
         axis[0].plot(range(axis_x,axis_x+sample_len,1),data,color = '#0a0b0c')
         axis[0].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[150]+y_plus_graph])
 
         axis_x=axis_x+sample_len      
         plt.pause(0.000001)
 
-        if (blinking_value>max(abs(fourierTransform[100:250]))):
+        if (blinking_value<max(abs(fourierTransform[1:5]))):
             GPIO.output(31, True)
             GPIO.output(35, False)
         else:

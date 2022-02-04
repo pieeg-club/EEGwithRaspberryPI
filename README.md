@@ -59,7 +59,7 @@ Python script dont allow reading data from ADS1299 with the frequency of 250 Hz.
 
 
 #### Video - Control robot toy by with blinking  
-[![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.13.bmp)](https://youtu.be/wNgCEKIXGUY)      
+[![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.18.jpg)](https://youtu.be/wNgCEKIXGUY)      
 
 
 #### For beginners

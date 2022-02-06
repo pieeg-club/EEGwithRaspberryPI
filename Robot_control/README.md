@@ -13,7 +13,7 @@ the best value must be found experimentally
 
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Robot_control/Supplementary%20files/fig.2.jpg "general view")
 
-(upper graph) - EEG signal through pass filter 1-30 Hz. an (upper c) – EEG signal (the part circled in purple from the graph above) received through the Fast Fourier Transform. The red line is the setting for turning on the LED, green lines are the frequency range in which we monitor the signal amplitude. b – LED circled in blue, output - 31 for GPIO.setmode (GPIO.BOARD)  
+(upper graph) - EEG signal through pass filter 1-30 Hz. Lower graph - EEG signal received through the Fast Fourier Transform (the part circled in purple from the graph above). The red line is the setting for turning on the LED, green lines are the frequency range in which we monitor the signal amplitude. (lower graph) – LED circled in blue, output - 31 for GPIO.setmode (GPIO.BOARD)    
 
 
 We can see in the lower graph for  various frequency ranges, dependence amplitudes from the frequency of  blinking (5 Hz and 3 Hz)

@@ -1,6 +1,5 @@
 # Control the robot by blinking
-![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Robot_control/Supplementary%20files/fig.1.jpg "general view")​ "general view")​
- "general view")​ "general view")​
+![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Robot_control/Supplementary%20files/fig.1.jpg "general view")
 
 Run - robot_control.py   
 

@@ -1,4 +1,6 @@
 # Control the robot by blinking
+
+For example, discrete output channels from GPIO can be connected directly or through a relay to the control panel of radio-controlled toy robots.  
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Robot_control/Supplementary%20files/fig.1.jpg "general view")
 
 Run - robot_control.py   

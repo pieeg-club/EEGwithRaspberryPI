@@ -1,21 +1,26 @@
 ### GUI Installation
 
-1.Make sure to have the latest version of PIP installed
+1.Install required packages
+``` bash
+sudo apt-get install libxml2 libglib2.0-dev libatlas-base-dev
+```
+
+2.Make sure to have the latest version of PIP installed
 ``` bash
 python -m pip install --upgrade pip
 ```
 
-2.Install the Python requirements
+3.Install the Python requirements
 ``` bash
 pip install -r requirements.txt
 ```
 
-3.A Either run the whole script
+4.A Either run the whole script
 ``` bash
 python real_time.py
 ```
 
-3.B Or run the simpler script
+4.B Or run the simpler script
 ``` bash
 python real_time_without_thread.py
 ```

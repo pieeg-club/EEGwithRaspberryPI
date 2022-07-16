@@ -11,6 +11,8 @@ from RPi import GPIO
 import scipy.fftpack
 
 GPIO.setmode(GPIO.BOARD)
+GPIO.cleanup()
+GPIO.setwarnings(False)
 GPIO.setup(31, GPIO.OUT)
 GPIO.setup(35, GPIO.OUT)
 

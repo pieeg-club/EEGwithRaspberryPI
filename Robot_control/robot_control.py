@@ -189,7 +189,7 @@ while 1:
         axis[1].set_xlabel('Frequency')
         axis[1].set_ylabel('Amplitude')
         #for channel in (range(0,8,1)):
-        channel=1
+        channel=0
 
         data=graph(channel,a)
         a=a+1

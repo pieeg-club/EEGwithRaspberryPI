@@ -28,15 +28,13 @@ The device must operate only from a battery - 5 V. Complete isolation from the m
  [robot_control.py](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Robot_control/robot_control.py) script to control a robot by blinking  
 
 
-
-
 Connect the shield to Raspberry PI 3 or RaspberryPI4 and after that connect the device to a battery (power supply) and connect electrodes.
 Full galvanic isolation from mains required.  
 This also applies to the monitor. Use only a monitor that is powered by the RaspberryPI, as in the picture below, left. Electrodes positioned according to International 10-20 system, right.    
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.7.bmp "general view")​
 
 #### Device pinout  
-Shiled connceted with raspbberryPI only in the netxt points     
+Shield connected with raspbberryPI only in the next points     
   43  +5V  
   44  GND  
   37  MOSI  
@@ -57,7 +55,7 @@ Blinking artifact, after Chewing. [Raw data](https://github.com/Ildaron/EEGwithR
 Alpha wave detection eyes open, eyes closed  
 ![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.11.alpha.bmp "general view")​  
 #### Description of the code  
-Python script dont allow reading data from ADS1299 with the frequency of 250 Hz. Necessary to use .c or .cpp scripts for reading data in real-time and python for signal processing and vialuzation.   
+Python script dont allow reading data from ADS1299 with the frequency of 250 Hz. Necessary to use .c or .cpp scripts for reading data in real-time and python for signal processing and visualization.   
  
 
 
@@ -72,15 +70,13 @@ During the measurement, in addition to artifacts caused by muscle activity, be c
 
 
 #### Citation  
-I. Rakhmatuiln, M. Zhanikeev and A. Parfenov, "Raspberry PI Shield - for measure EEG (PIEEG)," 2021 5th International Conference on Electrical, Electronics, Communication, Computer Technologies and Optimization Techniques (ICEECCOT), 2021, pp. 410-413, DOI: 10.1109/ICEECCOT52851.2021.9707969  
-
-
-Rakhmatulin, I., Volkl, S. (2020). PIEEG: Turn a Raspberry Pi into a Brain-Computer-Interface to measure biosignals. arXiv:2201.02228, https://arxiv.org/abs/2201.02228  
+* I. Rakhmatuiln, M. Zhanikeev and A. Parfenov, "Raspberry PI Shield - for measure EEG (PIEEG)," 2021 5th International Conference on Electrical, Electronics, Communication, Computer Technologies and Optimization Techniques (ICEECCOT), 2021, pp. 410-413, DOI: 10.1109/ICEECCOT52851.2021.9707969  
+* Rakhmatulin, I., Volkl, S. (2020). PIEEG: Turn a Raspberry Pi into a Brain-Computer-Interface to measure biosignals. arXiv:2201.02228, https://arxiv.org/abs/2201.02228  
 
 #### Contacts  
-[Crowdsupply](https://www.crowdsupply.com/hackerbci/pieeg)  
-ildarr2016@gmail.com  
-[linkedin](https://www.linkedin.com/in/ildar-rakhmatulin-262a66112/)  
-Slack - pieeg.slack.com  
-Web-Site - [hackerbci](https://www.hackerbci.com/)   
-[hackaday blog](https://hackaday.io/project/183912-pieeg-for-converting-raspberrypi-to-brain-computer/)
+[* Crowdsupply](https://www.crowdsupply.com/hackerbci/pieeg)  
+* ildarr2016@gmail.com  
+[* linkedin](https://www.linkedin.com/in/ildar-rakhmatulin-262a66112/)  
+* Slack - pieeg.slack.com  
+* Web-Site - [hackerbci](https://www.hackerbci.com/)   
+[* hackaday blog](https://hackaday.io/project/183912-pieeg-for-converting-raspberrypi-to-brain-computer/)

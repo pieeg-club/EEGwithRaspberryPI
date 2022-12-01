@@ -1,7 +1,7 @@
 # The easiest way to the neuroscience world with the shield for RaspberryPi - [PIEEG](https://www.hackerbci.com/) (website). Open-source. [Crowdsupply](https://www.crowdsupply.com/hackerbci/pieeg)
 
 [![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig19.bmp)](https://www.crowdsupply.com/hackerbci/pieeg)     
-It is not medical device!!! And can not be used for any medical purposes!!!
+It is not medical device!!! And can not be used for any medical purposes!!!  
 This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.
 We will try to reveal the process of reading EEG signals as fully and clearly as possible. Soon this project will be launched on the crowdfunding platform - [Crowdsupply](https://www.crowdsupply.com/hackerbci/pieeg)
 

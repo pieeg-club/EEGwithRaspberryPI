@@ -43,5 +43,5 @@ make
 2.Compiling the .so files
 
 ``` bash
-gcc -shared -home/pi/Desktop/new_spi/c-periphery-master/src real_time_massive.c /home/pi/Desktop/new_spi/c-periphery-master/build/libperiphery.a -o super_real_time_massive.so
+gcc -shared -home/pi/Desktop/new_spi/c-periphery-master/src real_time_massive.c /home/pi/Desktop/new_spi/c-periphery-master/build/libperiphery.a -o super_real_time_massive.so -fPIC
 ```

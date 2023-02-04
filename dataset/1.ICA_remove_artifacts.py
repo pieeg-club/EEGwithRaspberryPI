@@ -41,25 +41,18 @@ cutoff=2
 
 ch1 = butter_highpass_filter(ch1, cutoff, fps)
 ch1  =  butter_lowpass_filter(ch1, cutoffs, fps)
-
 ch2 = butter_highpass_filter(ch2, cutoff, fps)
 ch2  =  butter_lowpass_filter(ch2, cutoffs, fps)
-
 ch3 = butter_highpass_filter(ch3, cutoff, fps)
 ch3  =  butter_lowpass_filter(ch3, cutoffs, fps)
-
 ch4 = butter_highpass_filter(ch4, cutoff, fps)
 ch4  =  butter_lowpass_filter(ch4, cutoffs, fps)
-
 ch5 = butter_highpass_filter(ch5, cutoff, fps)
 ch5  =  butter_lowpass_filter(ch5, cutoffs, fps)
-
 ch6 = butter_highpass_filter(ch6, cutoff, fps)
 ch6  =  butter_lowpass_filter(ch6, cutoffs, fps)
-
 ch7 = butter_highpass_filter(ch7, cutoff, fps)
 ch7  =  butter_lowpass_filter(ch7, cutoffs, fps)
-
 ch8 = butter_highpass_filter(ch8, cutoff, fps)
 ch8  =  butter_lowpass_filter(ch8, cutoffs, fps)
 

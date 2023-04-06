@@ -3,6 +3,9 @@
 [![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig19.bmp)](https://www.crowdsupply.com/hackerbci/pieeg)     
 #### It is not medical device!!! And can not be used for any medical purposes!!!  
 #### Power supply - only battery 5V, please read datasheet!!!!!  
+You are fully responsible for your personal decision to purchase this device and, ultimately, for its safe use. PiEEG is not a medical device and has not been certified by any government regulatory agency for use with the human body. Use it at your own risk.  
+
+
 
 This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.
 We will try to reveal the process of reading EEG signals as fully and clearly as possible. Soon this project will be launched on the crowdfunding platform - [Crowdsupply](https://www.crowdsupply.com/hackerbci/pieeg)

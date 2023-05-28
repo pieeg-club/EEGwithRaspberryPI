@@ -2,7 +2,7 @@
 
 [![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig19.bmp)](https://www.crowdsupply.com/hackerbci/pieeg)     
 #### It is not medical device!!! And can not be used for any medical purposes!!!
-Alaso you can support us in hackaday 
+Alaso you can support us in hackaday   
 [![Hackday](https://github.com/HackerBCI/EEGwithRaspberryPI/blob/master/Supplementary%20files/works1.bmp)](https://hackaday.io/project/190326-the-easiest-way-to-neuroscience-with-pieeg)
 
 #### Power supply - only battery 5V, please read datasheet!!!!!  

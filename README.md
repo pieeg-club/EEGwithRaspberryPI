@@ -1,7 +1,10 @@
 # The easiest way to the neuroscience world with the shield for RaspberryPi. Open-source. [Crowdsupply](https://www.crowdsupply.com/hackerbci/pieeg)
 
 [![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig19.bmp)](https://www.crowdsupply.com/hackerbci/pieeg)     
-#### It is not medical device!!! And can not be used for any medical purposes!!!  
+#### It is not medical device!!! And can not be used for any medical purposes!!!
+Alaso you can support us in hackaday 
+[![Hackday]([https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig19.bmp](https://github.com/HackerBCI/EEGwithRaspberryPI/blob/master/Supplementary%20files/works.bmp))](https://hackaday.io/project/190326-the-easiest-way-to-neuroscience-with-pieeg)    
+
 #### Power supply - only battery 5V, please read datasheet!!!!!  
 You are fully responsible for your personal decision to purchase this device and, ultimately, for its safe use. PiEEG is not a medical device and has not been certified by any government regulatory agency for use with the human body. Use it at your own risk.  
 

@@ -123,11 +123,8 @@ while 1:
 
         axis[1].plot(frequencies, abs(fourierTransform))        
         axis[1].axis([0, 25, 0, 20])        
-        print ("ildar1", data.shape)
-        axis[0].plot(range(axis_x,axis_x+sample_len,1),data[-250:],color = '#0a0b0c')
-        print ("ildar2")    
+        axis[0].plot(range(axis_x,axis_x+sample_len,1),data[-250:],color = '#0a0b0c')  
         axis[0].axis([axis_x-x_minux_graph, axis_x+x_plus_graph, data[50]-y_minus_graph, data[150]+y_plus_graph])
-        print ("ildar3")
         axis_x=axis_x+sample_len      
         plt.pause(0.000001)
         

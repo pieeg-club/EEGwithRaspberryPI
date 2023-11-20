@@ -20,7 +20,7 @@ Alaso you can support us in hackaday
 
 
 This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.
-We will try to reveal the process of reading EEG signals as fully and clearly as possible. Soon this project will be launched on the crowdfunding platform - [Crowdsupply](https://www.crowdsupply.com/hackerbci/pieeg)
+We will try to reveal the process of reading EEG signals as fully and clearly as possible.  [Crowdsupply](https://www.crowdsupply.com/hackerbci/pieeg)
 
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=DIY%20Brain-Computer%20%20interface%20PIEEG%20&url=https://github.com/Ildaron/EEGwithRaspberryPI&hashtags=RaspberryPI,EEG,python,opensource)
 

@@ -60,19 +60,8 @@ Shiled connceted with raspbberryPI only in the netxt points
   34  MISO  
   35  CLKL  
   36  CS  
+
   
-#### Noise measure
-
-
-Chewing artifact (4-3-2-1) and blinking (only 4 times), in real-time for 8 electrodes via [real_time.py](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/GUI/real_time.py) high-pass filter 1-30 Hz    
-![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.16.jpg "general view")​  
-
-Blinking artifact, after Chewing. [Raw data](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/dataset/2.Blinking_Chewing.txt)
-![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.9.row_dara.bmp "general view")​  
-[Raw data](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/dataset/2.Blinking_Chewing.txt) with [band-pass filter](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/2.Data_filter.py) (1-40Hz)
-![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.10.band_bass.bmp "general view")​  
-Alpha wave detection eyes open, eyes closed  
-![alt tag](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/Fig.11.alpha.bmp "general view")​  
 #### Description of the code  
 Python script dont allow reading data from ADS1299 with the frequency of 250 Hz. Necessary to use .c or .cpp scripts for reading data in real-time and python for signal processing and vialuzation.   
  

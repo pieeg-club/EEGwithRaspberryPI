@@ -1,4 +1,4 @@
-# Easy way to the neuroscience world with the shield for RaspberryPi. Open-source. [Crowdsupply](https://www.crowdsupply.com/hackerbci/pieeg) (Not medical device)
+# Easy way to the neuroscience world with the shield for RaspberryPi. Open-source. [Linkedin for updates ](https://www.linkedin.com/company/96475004/admin/feed/posts/) (Not medical device)
 
 [![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig19.bmp)](https://www.crowdsupply.com/hackerbci/pieeg)     
 #### It is not medical device!!! And can not be used for any medical purposes!!!

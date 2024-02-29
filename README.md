@@ -1,8 +1,10 @@
 # Easy way to the neuroscience world with the shield for Raspberry Pi. Open-source.   
 
 ## To Buy -  PiEEG is available in the market in our partner shop [Elecrow](https://www.elecrow.com/pieeg.html)
-
-
+  
+  
+  
+  
 [Linkedin for updates ](https://www.linkedin.com/company/96475004/admin/feed/posts/) (Not medical device)
 
 [![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig19.bmp)](https://www.crowdsupply.com/hackerbci/pieeg)     

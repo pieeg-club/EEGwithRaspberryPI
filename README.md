@@ -1,6 +1,6 @@
 # Easy way to the neuroscience world with the shield for RaspberryPi. Open-source.   
 
-## To Buy -  PiEEG is available in the market in our partner shop [Elecrow]([https://www.crowdsupply.com/hackerbci/pieeg](https://www.elecrow.com/pieeg.html)
+## To Buy -  PiEEG is available in the market in our partner shop [Elecrow](https://www.crowdsupply.com/hackerbci/pieeg](https://www.elecrow.com/pieeg.html)
 
 
 [Linkedin for updates ](https://www.linkedin.com/company/96475004/admin/feed/posts/) (Not medical device)

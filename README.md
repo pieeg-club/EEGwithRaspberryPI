@@ -6,7 +6,7 @@
 #### It is not a medical device!!! And cannot be used for any medical purposes!!!
 
 This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.
-We will try to reveal the process of reading EEG signals as fully and clearly as possible.  [Crowd Supply](https://www.crowdsupply.com/hackerbci/pieeg)
+We will try to reveal the process of reading EEG signals as fully and clearly as possible. 
 
 #### Warnings
 >[!WARNING]

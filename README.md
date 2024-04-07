@@ -2,7 +2,7 @@
 
 ## To Buy - PiEEG is available in the market at our partner shop [Elecrow](https://www.elecrow.com/pieeg.html)
 [LinkedIn for updates]([https://www.linkedin.com/company/96475004/admin/feed/posts/](https://github.com/pieeg-club)) (Not a medical device)  
-## Actual scripts will be [here](https://www.linkedin.com/company/96475004/admin/feed/posts/) , now just only Python   
+## Actual scripts will be [here](https://github.com/pieeg-club) , now just only Python   
 #### It is not a medical device!!! And cannot be used for any medical purposes!!!
 
 This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.

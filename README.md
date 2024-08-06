@@ -73,5 +73,4 @@ I. Rakhmatuiln, M. Zhanikeev, and A. Parfenov, "Raspberry Pi Shield - for measur
 Rakhmatulin, I., Volkl, S. (2020). PIEEG: Turn a Raspberry Pi into a Brain-Computer Interface to measure biosignals. arXiv:2201.02228, https://arxiv.org/abs/2201.02228  
 
 #### Contacts  
-ildarr2016@gmail.com  
 http://pieeg.com/

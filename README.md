@@ -1,4 +1,6 @@
-# Actual scripts will be [here](https://github.com/pieeg-club) , now just only Python   
+# Actual scripts will be [here](https://github.com/pieeg-club) , now just only Python. It is a version with C language.    
+
+
 [Manual](https://colab.research.google.com/drive/1xW6fwzVdLH83zHoorjeWai6SdZoOanfA#scrollTo=9bxgisvWfs5f)  
 # Easy way to the neuroscience world with a shield for Raspberry Pi. Open-source.
 

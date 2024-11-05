@@ -2,8 +2,7 @@
 
 
 # To Buy - PiEEG is available in the market at our partner shop [Elecrow](https://pieeg.com/pieeg/)
-[LinkedIn for updates]([https://www.linkedin.com/company/96475004/admin/feed/posts/](https://github.com/pieeg-club)) (Not a medical device)  
-
+[LinkedIn for updates]([https://www.linkedin.com/company/96475004/admin/feed/posts/](https://github.com/pieeg-club)) 
 
 This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.
 We will try to reveal the process of reading EEG signals as fully and clearly as possible. 

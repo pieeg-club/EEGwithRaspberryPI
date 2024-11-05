@@ -2,7 +2,6 @@
 
 
 # To Buy - PiEEG is available in the market at our partner shop [Elecrow](https://pieeg.com/pieeg/)
-[LinkedIn for updates]([https://www.linkedin.com/company/96475004/admin/feed/posts/](https://github.com/pieeg-club)) 
 
 This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.
 We will try to reveal the process of reading EEG signals as fully and clearly as possible. 
@@ -55,13 +54,6 @@ Python script does not allow reading data from ADS1299 with a frequency of 250 H
 
 #### Video - Control Robot Toy by Blinking  
 [![Software demonstrations](https://github.com/Ildaron/EEGwithRaspberryPI/blob/master/Supplementary%20files/fig.18.jpg)](https://youtu.be/wNgCEKIXGUY)      
-
-
-#### For Beginners
-During the measurement, in addition to artifacts caused by muscle activity, be concerned about the increased resistance between the body and the floor. For example, in the picture below, the moment when the feet touch the floor with and without an insulated shoe. Without insulated shoes - increased noise is noticeable.
-
-
-
 
 #### Citation  
 I. Rakhmatuiln, M. Zhanikeev, and A. Parfenov, "Raspberry Pi Shield - for measure EEG (PIEEG)," 2021 5th International Conference on Electrical, Electronics, Communication, Computer Technologies and Optimization Techniques (ICEECCOT), 2021, pp. 410-413, DOI: 10.1109/ICEECCOT52851.2021.9707969  [link](https://ieeexplore.ieee.org/document/9707969)

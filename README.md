@@ -1,13 +1,9 @@
 # Software from this rep Not supported more. Actual scripts will be [here](https://github.com/pieeg-club) , now just only Python. It is a old version with C language.    
 
 
-[Manual](https://colab.research.google.com/drive/1xW6fwzVdLH83zHoorjeWai6SdZoOanfA#scrollTo=9bxgisvWfs5f)  
-# Easy way to the neuroscience world with a shield for Raspberry Pi. Open-source.
-
 # To Buy - PiEEG is available in the market at our partner shop [Elecrow](https://pieeg.com/pieeg/)
 [LinkedIn for updates]([https://www.linkedin.com/company/96475004/admin/feed/posts/](https://github.com/pieeg-club)) (Not a medical device)  
 
-#### It is not a medical device!!! And cannot be used for any medical purposes!!!
 
 This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.
 We will try to reveal the process of reading EEG signals as fully and clearly as possible. 

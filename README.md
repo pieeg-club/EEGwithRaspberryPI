@@ -1,4 +1,4 @@
-### Software from this rep Not supported more. Actual scripts will be [here](https://github.com/pieeg-club/PiEEG) , now just only Python. It is a old version with C language.    
+Actual locations for the scripts will be [here](https://github.com/pieeg-club/PiEEG) , now just only Python.
 
 
 ### To Buy - PiEEG is available in the market at our partner shop [Elecrow](https://pieeg.com/pieeg/)

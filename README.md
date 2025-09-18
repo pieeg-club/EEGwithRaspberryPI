@@ -1,12 +1,12 @@
-# Software from this rep Not supported more. Actual scripts will be [here](https://github.com/pieeg-club/PiEEG) , now just only Python. It is a old version with C language.    
+### Software from this rep Not supported more. Actual scripts will be [here](https://github.com/pieeg-club/PiEEG) , now just only Python. It is a old version with C language.    
 
 
-# To Buy - PiEEG is available in the market at our partner shop [Elecrow](https://pieeg.com/pieeg/)
+### To Buy - PiEEG is available in the market at our partner shop [Elecrow](https://pieeg.com/pieeg/)
 
 This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.
 We will try to reveal the process of reading EEG signals as fully and clearly as possible. 
 
-# GUI
+### GUI
 PiEEG it is a low-cost brain-computer interface that allows measuring EEG via RaspberryPI  
 [Manual](https://colab.research.google.com/drive/1xW6fwzVdLH83zHoorjeWai6SdZoOanfA#scrollTo=9bxgisvWfs5f)    
 [Manual for quick start ](https://github.com/pieeg-club/PiEEG/blob/main/Manual.%20Conenction%20and%20start%20-%20PiEEG1.pdf)    

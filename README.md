@@ -6,13 +6,7 @@
 This project is the result of several years of work on the development of BCI. We believe that the easiest way to get started with biosignals is to use a shield.
 We will try to reveal the process of reading EEG signals as fully and clearly as possible. 
 
-#### Warnings
->[!WARNING]
-> You are fully responsible for your personal decision to purchase this device and, ultimately, for its safe use. PiEEG is not a medical device and has not been certified by any government regulatory agency for use with the human body. Use it at your own risk.  
 
->[!CAUTION]
-> The device must operate only from a battery - 5 V. Complete isolation from the mains power is required.! The device MUST not be connected to any kind of mains power, via USB or otherwise.   
-> Power supply - only battery 5V, please read the datasheet!!!!!  
 
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=DIY%20Brain-Computer%20Interface%20PIEEG%20&url=https://github.com/Ildaron/EEGwithRaspberryPI&hashtags=RaspberryPI,EEG,python,opensource)
 
@@ -58,8 +52,16 @@ Python script does not allow reading data from ADS1299 with a frequency of 250 H
 #### Citation  
 I. Rakhmatuiln, M. Zhanikeev, and A. Parfenov, "Raspberry Pi Shield - for measure EEG (PIEEG)," 2021 5th International Conference on Electrical, Electronics, Communication, Computer Technologies and Optimization Techniques (ICEECCOT), 2021, pp. 410-413, DOI: 10.1109/ICEECCOT52851.2021.9707969  [link](https://ieeexplore.ieee.org/document/9707969)
 
-
 Rakhmatulin, I., Volkl, S. (2020). PIEEG: Turn a Raspberry Pi into a Brain-Computer Interface to measure biosignals. arXiv:2201.02228, https://arxiv.org/abs/2201.02228  
 
 #### Contacts  
 http://pieeg.com/
+
+
+#### Warnings
+>[!WARNING]
+> You are fully responsible for your personal decision to purchase this device and, ultimately, for its safe use. PiEEG is not a medical device and has not been certified by any government regulatory agency for use with the human body. Use it at your own risk.  
+
+>[!CAUTION]
+> The device must operate only from a battery - 5 V. Complete isolation from the mains power is required.! The device MUST not be connected to any kind of mains power, via USB or otherwise.   
+> Power supply - only battery 5V, please read the datasheet!!!!!  

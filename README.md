@@ -176,9 +176,6 @@ Details, troubleshooting and the data format: **[Software docs](https://docs.pie
 | [Troubleshooting](https://docs.pieeg.com/hardware/devices/pieeg-8/troubleshooting/) | Fixes for SPI, GPIO, software and noise |
 | [Safety](https://docs.pieeg.com/hardware/devices/pieeg-8/safety/) | Battery-only operation and responsible use |
 
-## Video
-
-[![How to start with PiEEG](https://raw.githubusercontent.com/pieeg-club/PiEEG-docs/main/public/images/hardware/2026/10/pieeg8_video.jpg)](https://youtu.be/zOxcixEGeE8)
 
 ## Citation
 
